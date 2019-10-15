@@ -7,22 +7,26 @@ var lyrics = ["This", "hit", "that", "ice", "cold",
               "the", "city", "Got", "Chucks", "on", 
               "with", "Saint", "Laurent", "Gotta", "kiss", 
               "myself", "I'm", "so", "pretty"];
-// lyrics.toString()
-// console.log(lyrics.join(" ") 
+// lyrics.toString();
+// console.log(lyrics.join(" "))
 
-// console.log(lyrics.reverse())
 
-// for (i = 0; i < lyrics.length; i++) {
-//     if ( i % 2 === 0) {
-//         console.log(lyrics[i])
+// console.log(lyrics.reverse().join(" "))
+
+// function everyOther(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i % 2 === 0) {
+//             console.log(arr[i])
 //     } 
 // }
+// }
+// everyOther(lyrics)
 
-// for (i = 0; i < lyrics.length; i++) {
+// for (i = 0; i < lyrics.length; i+= 2) {
 //     if (i % 2 === 0) {
 //         console.log(lyrics.reverse())
 //     } else {
-//         console.log(lyrics[i])
+//         return (lyrics[i])
 //     }
 // }
 // console.log(lyrics[i])
