@@ -1,8 +1,8 @@
-// function collectAnimals(...animals) {  
-//     /*and here*/console.log(animals) 
-// }
+function collectAnimals(...animals) {  
+    /*and here*/console.log(animals) 
+}
 
-// collectAnimals("dog", "cat", "mouse", "jackolope", "platypus"); 
+collectAnimals("dog", "cat", "mouse", "jackolope", "platypus"); 
 // ["dog", "cat", "mouse", "jackolope", "platypus"]
 
 
