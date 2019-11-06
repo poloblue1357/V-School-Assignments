@@ -4,38 +4,37 @@ class Player {
         this.TotalCoins = totalCoins;
         this.Status = status
         } 
-}
-hasStar = false;
-gameActive = true;
-    
-function setName(namePicked) {
+
+setName(namePicked) {
         console.log("Mario")
     }
-function gotHit() {
-        console.log()
+ gotHit() {
+        
     }
-function gotPowerUp() {
+ gotPowerUp() {
 
     }
-function addCoin() {
+ addCoin() {
         totalCoins++
     }
-function print() {
+ print() {
         console.log(name, totalCoins, status, star-properties)
     }
-function randomRangeFunction() {
-    let number = Math.floor(Math.random() * 2)
+ setInterval(randomRangeFunction() {
+    let number = Math.floor(Math.random() * 3)
         if(number == 0) {
-            gotHit()
+            mario.gotHit()
         } else if(number == 1) {
-            gotPowerUp()
+            mario.gotPowerUp()
         } else if(number == 2) {
-            addCoin()
+            mario.addCoin()
         }
-    print()
-    const randomRange = windows.setInterval(1000)
+    }, 1000);
+}
 
-    }  
+const randomRange = windows.setInterval(1000)
+hasStar = false;
+gameActive = true;  
 const status = ["Powered Up", "Big", "Small", "Dead"];
 const Mario = new Player("Mario", 0, status[0] ) 
 console.log(Mario)

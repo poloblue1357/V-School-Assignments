@@ -1,15 +1,19 @@
 var shopper = {
     name: "John",
     age: 25,
-    single: True,
+    single: true,
+    salutation: function () {
+                    console.log( "Welcome to Smith's!");
+} 
+}
+shopper.salutation()
+console.log(shopper)
 
-smiths.grocerystore = function () {
-        return "welcome to smiths"
-    },
+ 
 
 grocerycart = ["milk", "eggs", "bread", "steak"]
 
-}
+
 
 
 

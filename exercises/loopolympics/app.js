@@ -9,7 +9,7 @@
 
 // var fruit = ["banana", "orange", "apple", "kiwi"] 
 // for (let i = 0; i < fruit.length; i++) {
-//     console.log(fruit[i])
+// //     console.log(fruit[i])
 // }
 
 // const number = []
@@ -127,19 +127,19 @@
 //             ["x", ...], 
 //             ["x",...], ...] 
 
-const grid = []
-for (let i = 0; i < 3; i++) {
-    const gri = [];
-    for (let j = 0; j < 3; j++) {
-       gri.push(j) 
-    }
-    grid.push(gri)
-}
+// const grid = []
+// for (let i = 0; i < 3; i++) {
+//     const gri = [];
+//     for (let j = 0; j < 3; j++) {
+//        gri.push(j) 
+//     }
+//     grid.push(gri)
+// }
 
-for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-        grid[i][j] = "x"
-    }
-}
-console.log(grid)
+// for (let i = 0; i < 3; i++) {
+//     for (let j = 0; j < 3; j++) {
+//         grid[i][j] = "x"
+//     }
+// }
+// console.log(grid)
 
