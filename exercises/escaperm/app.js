@@ -4,8 +4,8 @@ let isAlive = true
 let hasKey = false
 
 const index = readlineSync.keyInSelect(option,("Welcome to the game. Here are your options: "))
-// const b = readlineSync.keyInSelect(option, ("Good call. Now what will you do? "))
-// const c = readlineSync.keyInSelect(option, ("You're free now! "))
+const b = readlineSync.keyInSelect(option, ("Good call. Now what will you do? "))
+const c = readlineSync.keyInSelect(option, ("You're free now! "))
 while(isAlive === true && hasKey === false){
      if (option[index] === 'Put hand in hole'){
        console.log("You're Dead!")
