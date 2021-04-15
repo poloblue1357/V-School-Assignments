@@ -12,7 +12,7 @@ while(isAlive === true && hasKey === false){
        isAlive = false
        
     } else if (option[index] === "Find the key") {
-        console.log("Good call! Now what will you do? ")
+        b
         hasKey = true
 
     } else if (option[index] === "Open the door") {
@@ -20,6 +20,7 @@ while(isAlive === true && hasKey === false){
 
     } else if (option[index] === "Open the door" && hasKey === true) {
         console.log("You Won!")
+        c
     }
 
 }

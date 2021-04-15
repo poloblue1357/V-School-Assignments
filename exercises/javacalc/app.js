@@ -11,7 +11,7 @@ function quickMaffs () {
         console.log(total)
     } else if ( op == 1) {
         let total = +numb1 - +numb2
-        console.log(total)        
+        console.log("The total is: " + total)        
     } else if (op == 2) {
         let total = +numb1 * +numb2
         console.log(total)

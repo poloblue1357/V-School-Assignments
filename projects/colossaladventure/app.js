@@ -15,6 +15,7 @@ let inventory = []
 const enemies = [ogre, sorcerer, witch]
 const hero = new Hero("Hero", 400, 10)
 function Hero(name, hp, ad) {
+    
     this.name = name;
     this.health = hp;
     this.attack = ad;
@@ -27,8 +28,7 @@ console.log(`Nice to meet you ${name}, your journey will now begin.`)
 while (isAlive && !hasWon) {
     let choice = readlineSync.keyIn("Do you want to (w) walk, (i) check inventory, (p) print info, or (q) quit?", {limit:'wiqp'})
     if (choice === "w"){
-        walk()
-        
+        walk() 
     } else if (choice === "i") {
         checkInventory()
     } else if (choice === "p"){
