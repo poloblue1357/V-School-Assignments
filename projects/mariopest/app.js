@@ -8,5 +8,5 @@ button.addEventListener("click", function (e) {
     let q = 5
     let w = 7
     let r = 11
-    t.value = (q*g.value) + (w * b.value) + (r*c.value)
+    t.value = (q * g.value) + (w * b.value) + (r * c.value)
 })

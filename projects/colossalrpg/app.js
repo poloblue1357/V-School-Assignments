@@ -114,5 +114,5 @@ function status() {
     console.log(userName, hero.health, inventory)
 }
 
-function rest(...para1)
+
 
