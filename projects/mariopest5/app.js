@@ -7,7 +7,6 @@ const button = document.getElementById("submitButton")
 const totalPrice = document.total.totalPrice
 
 button.addEventListener("click", function(event) {
-    event.preventDefault()
 
     let a = 5
     let b = 7
