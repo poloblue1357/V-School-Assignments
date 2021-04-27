@@ -1,0 +1,106 @@
+* {
+    
+}
+.h1Header {
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.h2Header {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 25px;
+    font-style: italic;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navLink {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.blankSpace {
+
+}
+.navBar {
+    align-items: center;
+    font-size: 25px;
+}
+.carrot {
+    font-size: 50px;
+}
+.footer {
+    font-size: 18px;
+}
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.firstImage {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+}
+.secondImage {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+}
+.thirdImage {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+}
+.fourthImage {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 25px;
+}
+.fifthImage {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+.authors {
+
+    border-bottom: dotted 1px black;
+}
+.uL {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none;
+    grid-column-gap: 40px;
+    overflow-wrap: break-word;
+    margin-bottom: 10px;
+}
+.uL > li {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.links {
+    background: rgba(138,188,159,0.5);
+}
+.secondUL {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none;
+    grid-column-gap: 40px;
+    overflow-wrap: break-word;
+}
+.secondUL > li {
+    width: 100%;
+    margin-bottom: 20px;    
+}

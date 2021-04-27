@@ -22,7 +22,7 @@
     background-color: aquamarine;
 }
 
-@media (max-width: 900px){
+@media only screen and (max-width: 1132px){
     /* use this media query to help these two cells drop to the bottom when screens are smaller */
     .authors {
          
@@ -33,6 +33,11 @@
     /* container could use some help so that it's children are full screen width */
     .container {
         
+    }
+    .h1h3{
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
     }
 }
 

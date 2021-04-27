@@ -20,7 +20,9 @@ setName(namePicked) {
  print() {
         console.log(name, totalCoins, status, star-properties)
     }
- setInterval(randomRangeFunction() {
+ 
+}
+setInterval(() => {
     let number = Math.floor(Math.random() * 3)
         if(number == 0) {
             mario.gotHit()
@@ -30,8 +32,7 @@ setName(namePicked) {
             mario.addCoin()
         }
     }, 1000);
-}
-
+    
 const randomRange = windows.setInterval(1000)
 hasStar = false;
 gameActive = true;  
