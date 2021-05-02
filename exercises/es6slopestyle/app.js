@@ -82,15 +82,15 @@
 //   }
 
 
-function populatePeople(names){
-    return names.map(function(name){
-        name = name.split(" ");
-        let [firstName, lastName] = name
-        return [{firstName, lastName}]
-    })
-}
+// function populatePeople(names){
+//     return names.map(function(name){
+//         name = name.split(" ");
+//         let [firstName, lastName] = name
+//         return [{firstName, lastName}]
+//     })
+// }
 
-console.log(populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"]))
+// console.log(populatePeople(["Frank Peterson", "Suzy Degual", "Liza Jones"]))
 //[
 //  {firstName: "Frank", lastName: "Peterson"},
 //  {firstName: "Suzy", lastName: "Degual"},
