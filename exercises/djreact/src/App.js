@@ -90,7 +90,7 @@ class App extends React.Component {
 export default App
 
 
-import React, {Component} from "react"
+// import React, {Component} from "react"
 
 /**
  * Challenge: Wire up the partially-finished travel form so that it works!
@@ -107,89 +107,89 @@ import React, {Component} from "react"
  * to play around with and learn from at https://coursework.vschool.io
  */
 
-class App extends Component {
-    constructor() {
-        super()
-        this.state = {
-            gender: '',
-            location: '',
-            dietRestrictions: [],
-            age: '',
-            firstName: '',
-            lastName: '',
-        }
-    }
+// class App extends Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             gender: '',
+//             location: '',
+//             dietRestrictions: [],
+//             age: '',
+//             firstName: '',
+//             lastName: '',
+//         }
+//     }
     
-    handleChange = (event) =>{
-        const {name, value, type, checked } = event.target
-        // type === "checkbox" ? this.setState({[name]: checked}) : this.setState({[name]: value})
-        if(name === 'dietRestrictions'){
-            const copyOfArr = [...this.state.dietRestrictions] 
-            copyOfArr.includes(value) ? copyOfArr.splice(copyOfArr.indexOf(value), 1) : copyOfArr.push(value)
-            this.setState({dietRestrictions: copyOfArr})
-        } else {
-            this.setState({[name]: value})
-        }
-    }
+//     handleChange = (event) =>{
+//         const {name, value, type, checked } = event.target
+//         // type === "checkbox" ? this.setState({[name]: checked}) : this.setState({[name]: value})
+//         if(name === 'dietRestrictions'){
+//             const copyOfArr = [...this.state.dietRestrictions] 
+//             copyOfArr.includes(value) ? copyOfArr.splice(copyOfArr.indexOf(value), 1) : copyOfArr.push(value)
+//             this.setState({dietRestrictions: copyOfArr})
+//         } else {
+//             this.setState({[name]: value})
+//         }
+//     }
     
-    render() {
-        return (
-            <main>
-                <form>
-                    <input type='text' value={this.state.firstName} name="firstName" placeholder="First Name" onChange={this.handleChange} /><br />
-                    <input type='text' value={this.state.lastName} name="lastName" placeholder="Last Name" onChange={this.handleChange} /><br />
-                    <input type='text' value={this.state.age} name="age" placeholder="Age" onChange={this.handleChange} /><br />
+//     render() {
+//         return (
+//             <main>
+//                 <form>
+//                     <input type='text' value={this.state.firstName} name="firstName" placeholder="First Name" onChange={this.handleChange} /><br />
+//                     <input type='text' value={this.state.lastName} name="lastName" placeholder="Last Name" onChange={this.handleChange} /><br />
+//                     <input type='text' value={this.state.age} name="age" placeholder="Age" onChange={this.handleChange} /><br />
                     
-                    {/* Create radio buttons for gender here */}
-                    <label>
-                        <input type="radio" name="gender" value="male"  
-                        onChange={this.handleChange} 
-                        /> Male
-                        <br />
-                    </label>
-                    <label>
-                        <input type="radio" name="gender" value="female" 
-                        onChange={this.handleChange}
-                        /> Female
-                        <br />
-                    </label>
-                    {/* Create select box for location here */}
-                        <select name="location" onChange={this.handleChange} value=     {this.state.location} >
-                            <option value="bahamas">Bahamas</option>
-                            <option value="maldives">Maldives</option>
-                            <option value="Bora Bora">Bora Bora</option>
-                            <option value="santorini">Santorini</option>
-                        </select>
-                    <br />
+//                     {/* Create radio buttons for gender here */}
+//                     <label>
+//                         <input type="radio" name="gender" value="male"  
+//                         onChange={this.handleChange} 
+//                         /> Male
+//                         <br />
+//                     </label>
+//                     <label>
+//                         <input type="radio" name="gender" value="female" 
+//                         onChange={this.handleChange}
+//                         /> Female
+//                         <br />
+//                     </label>
+//                     {/* Create select box for location here */}
+//                         <select name="location" onChange={this.handleChange} value=     {this.state.location} >
+//                             <option value="bahamas">Bahamas</option>
+//                             <option value="maldives">Maldives</option>
+//                             <option value="Bora Bora">Bora Bora</option>
+//                             <option value="santorini">Santorini</option>
+//                         </select>
+//                     <br />
                     
-                    {/* Create check boxes for dietary restrictions here */}
-                    <label>
-                        <input type="checkbox" name="dietRestrictions" value="peanut, " checked={this.state.dietRestrictions.includes('peanut, ')} onChange={this.handleChange} 
-                        /> Peanut
-                        <br />
-                        <input type="checkbox" name="dietRestrictions" value="gluten, " checked={this.state.dietRestrictions.includes('gluten, ')} onChange={this.handleChange} 
-                        /> Gluten
-                        <br />
-                        <input type="checkbox" name="dietRestrictions" value="vegetarian, " checked={this.state.dietRestrictions.includes('vegetarian, ')} onChange={this.handleChange} 
-                        /> Vegetarian
-                        <br />
-                    </label>
+//                     {/* Create check boxes for dietary restrictions here */}
+//                     <label>
+//                         <input type="checkbox" name="dietRestrictions" value="peanut, " checked={this.state.dietRestrictions.includes('peanut, ')} onChange={this.handleChange} 
+//                         /> Peanut
+//                         <br />
+//                         <input type="checkbox" name="dietRestrictions" value="gluten, " checked={this.state.dietRestrictions.includes('gluten, ')} onChange={this.handleChange} 
+//                         /> Gluten
+//                         <br />
+//                         <input type="checkbox" name="dietRestrictions" value="vegetarian, " checked={this.state.dietRestrictions.includes('vegetarian, ')} onChange={this.handleChange} 
+//                         /> Vegetarian
+//                         <br />
+//                     </label>
                     
-                    <button>Submit</button>
-                </form>
-                <hr />
-                <h2>Entered information:</h2>
-                <p>Your name: {this.state.firstName} {this.state.lastName}</p>
-                <p>Your age: {this.state.age}</p>
-                <p>Your gender: {this.state.gender}</p>
-                <p>Your destination: {this.state.location}</p>
-                <p>
-                    Your dietary restrictions: 
-                    {this.state.dietRestrictions}
-                </p>
-            </main>
-        )
-    }
-}
+//                     <button>Submit</button>
+//                 </form>
+//                 <hr />
+//                 <h2>Entered information:</h2>
+//                 <p>Your name: {this.state.firstName} {this.state.lastName}</p>
+//                 <p>Your age: {this.state.age}</p>
+//                 <p>Your gender: {this.state.gender}</p>
+//                 <p>Your destination: {this.state.location}</p>
+//                 <p>
+//                     Your dietary restrictions: 
+//                     {this.state.dietRestrictions}
+//                 </p>
+//             </main>
+//         )
+//     }
+// }
 
-export default App
+// export default App

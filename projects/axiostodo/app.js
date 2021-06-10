@@ -53,17 +53,17 @@ function createToDo(todo) {
     container.appendChild(deletebutton)
     console.log(container) 
     list.appendChild(container)
-        deletebutton.addEventListener("click", e => {
-            axios.delete("https://api.vschool.io/dan/todo/" + todo._id).then((response)=> {
-                response.data
-                container.remove()
-            })
+    deletebutton.addEventListener("click", e => {
+        axios.delete("https://api.vschool.io/dan/todo/" + todo._id).then((response)=> {
+            response.data
+            container.remove()
         })
-        input.addEventListener("change" , e => {
-            axios.put("https://api.vschool.io/dan/todo/" + todo._id, {completed: e.target.checked}).then(response => {
-                h1.style.textDecoration = response.data.completed ? "line-through" : "none"
-            })
+    })
+    input.addEventListener("change" , e => {
+        axios.put("https://api.vschool.io/dan/todo/" + todo._id, {completed: e.target.checked}).then(response => {
+            h1.style.textDecoration = response.data.completed ? "line-through" : "none"
         })
+    })
     if(todo.completed === true) {
         h1.style.textDecoration = "line-through"
     }

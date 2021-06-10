@@ -25,14 +25,14 @@
 
 // console.log(alphabetical.sort())
 
-const byAge = [
-    { name: "Quiet Samurai", age: 22 },
-    { name: "Arrogant Ambassador", age: 100 },
-    { name: "Misunderstood Observer", age: 2 },
-    { name: "Unlucky Swami", age: 77 }
-]
+// const byAge = [
+//     { name: "Quiet Samurai", age: 22 },
+//     { name: "Arrogant Ambassador", age: 100 },
+//     { name: "Misunderstood Observer", age: 2 },
+//     { name: "Unlucky Swami", age: 77 }
+// ]
 
-const e = byAge.sort(function(a, b) {
-    return a.age - b.age
-})
-console.log(e)
+// const e = byAge.sort(function(a, b) {
+//     return a.age - b.age
+// })
+// console.log(e)

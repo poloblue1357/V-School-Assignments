@@ -17,5 +17,5 @@ if( index == 0) {
     console.log("The result is:" + multiply )
 } else if (index == 3) {
     let divide = +num1 / +num2
-    console.log("The result is: " + divide)
+    console.log("The result is: " + divide )
 }
