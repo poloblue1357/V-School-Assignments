@@ -1,3 +1,4 @@
+// where everything renders. top parent component
 import React from "react"
 import ReactDOM from "react-dom"
 
