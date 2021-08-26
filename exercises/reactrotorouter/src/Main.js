@@ -8,6 +8,7 @@ import Services from "./Services"
 function Main() {
     return (
         <div>
+            <h4 style={{color: "blue"}}>Main Section:</h4>
             <Switch>
                 <Route exact path="/"><Home /></Route>
                 <Route path="/about"><About /></Route>

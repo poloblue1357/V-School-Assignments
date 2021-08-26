@@ -18,6 +18,7 @@ class UglyContextProvider extends React.Component {
     addItemToList = (newItem) => { 
         axios.post("https://api.vschool.io/dan/thing", newItem)
             .then(response => {
+                console.log(response.data)
                 this.setState(prevState => {
                     return {
                         arrayOfThings: [response.data, ...prevState.arrayOfThings],
@@ -49,18 +50,18 @@ class UglyContextProvider extends React.Component {
                     return {arrayOfThings}
                 })
 
-                // let map = this.state.arrayOfThings.map(item => item)
-                // return map
-                // axios.get("https://api.vschool.io/dan/thing/" )
-                // .then(
-                //     (result) => {
-                //         this.setState({
-                //             arrayOfThings: result.data
-                //         })
-                //     }
-                // )
             })       
-    } // map
+        } 
+        // let map = this.state.arrayOfThings.map(item => item)
+        // return map
+        // axios.get("https://api.vschool.io/dan/thing/" )
+        // .then(
+        //     (result) => {
+        //         this.setState({
+        //             arrayOfThings: result.data
+        //         })
+        //     }
+        // )
     deleteItem = ( _id) => {
         axios.delete(`https://api.vschool.io/dan/thing/${_id}`)
             .then(response => {

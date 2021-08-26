@@ -2,7 +2,7 @@ import React from "react"
 
 function Services() {
     return (
-        <h1>Services page yo!</h1>
+        <h1>Services page fam!</h1>
     )
 }
 
