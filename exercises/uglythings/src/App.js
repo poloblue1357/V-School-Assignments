@@ -1,25 +1,14 @@
 import React from "react"
-import Description from "./Description"
-import { ThemeContextConsumer } from "./ThemeContext"
-import Title from "./Title"
-import Img from "./Img"
-import UploadedInfo from "./UploadedInfo"
+import Inputs from "./Inputs"
+import List from "./List"
 
 function App() {
     return (
         <div>
-            <Title />
-            <Description />
-            <Img />
-            <ThemeContextConsumer>
-                {({handleChange, updateInfo}) => (
-                    <button onClick={event => {
-                        handleChange(event) 
-                        updateInfo()
-                    }}>Submit</button>
-                )}
-            </ThemeContextConsumer>
-            <UploadedInfo />
+            <h1 style={{color: "gray"}}>Add New Thing to List!</h1>
+            <Inputs />
+            <h1 style={{color: "pink"}}>List of Things: </h1>
+            <List />
         </div>
     )
 }

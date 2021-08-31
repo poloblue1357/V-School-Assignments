@@ -1,23 +1,16 @@
-// where every component comes to render
 import React from "react"
-import InitialMeme from "./InitialMeme"
-import MemeForm from "./MemeForm"
-import FormInput from "./FormInput"
-import RenderMeme from "./RenderMeme"
+import Inputs from "./Inputs"
+import List from "./List"
 
-class App extends React.Component {
-
-    
-    render() {
-        return (
-            <div>
-                <InitialMeme /> 
-                <MemeForm />
-                <RenderMeme /> 
-                <FormInput />       
-            </div>
-        )
-    }
+function App() {
+    return (
+        <div>
+            <h1 style={{color: "gray"}}>Add New Thing to List!</h1>
+            <Inputs />
+            <h1 style={{color: "pink"}}>List of Things: </h1>
+            <List />
+        </div>
+    )
 }
 
 export default App

@@ -2,10 +2,11 @@ import React from "react"
 import ReactDOM from "react-dom"
 
 import App from "./App"
-import {ThemeContextProvider} from "./ThemeContext"
+import {UglyContextProvider} from "./uglyContext"
 
 ReactDOM.render(
-    <ThemeContextProvider>
+    <UglyContextProvider>
         <App />
-    </ThemeContextProvider>, 
-    document.getElementById("root"))
+    </UglyContextProvider>, 
+    document.getElementById("root")
+)

@@ -49,7 +49,6 @@ class UglyContextProvider extends React.Component {
                     let arrayOfThings = prevState.arrayOfThings.map((thing) => thing._id === _id ? response.data : thing)
                     return {arrayOfThings}
                 })
-
             })       
         } 
         // let map = this.state.arrayOfThings.map(item => item)
@@ -66,21 +65,24 @@ class UglyContextProvider extends React.Component {
         axios.delete(`https://api.vschool.io/dan/thing/${_id}`)
             .then(response => {
                 console.log(response.data)
-                let filterThing = this.state.arrayOfThings.filter((thing, index) => index !== _id)
+                let filterThing = this.state.arrayOfThings.filter((thing) => thing._id !== _id)
                 
                 this.setState({
                     arrayOfThings: filterThing
-                })
-                axios.get("https://api.vschool.io/dan/thing/" )
-                    .then(
-                        (result) => {
-                            this.setState({
-                                arrayOfThings: result.data
-                            })
-                        }
-                    )
-            })
-    } // filter
+                })})
+                .catch(error => console.log(error)) 
+                
+            //     axios.get("https://api.vschool.io/dan/thing/" )
+            //         .then(
+            //             (result) => {
+            //                 this.setState({
+            //                     arrayOfThings: result.data
+            //                 })
+            //             }
+            //         )
+            // })
+}
+  // filter
     componentDidMount = () => {
         axios.get("https://api.vschool.io/dan/thing/" )
             .then(

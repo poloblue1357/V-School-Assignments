@@ -9,7 +9,6 @@ function List() {
                 return context.arrayOfThings.map((item) => <Thing item={item} key={item._id} />)
                 
             }}
-            
         </UglyContextConsumer>
         
     )
