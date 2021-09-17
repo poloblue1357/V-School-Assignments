@@ -2,11 +2,11 @@ import React from "react"
 import ReactDOM from "react-dom"
 
 import App from "./App"
-import {UglyContextProvider} from "./uglyContext"
+import {PokemonContextProvider} from "./pokeContext"
 
 ReactDOM.render(
-    <UglyContextProvider>
+    <PokemonContextProvider>
         <App />
-    </UglyContextProvider>, 
+    </PokemonContextProvider>, 
     document.getElementById("root")
 )
