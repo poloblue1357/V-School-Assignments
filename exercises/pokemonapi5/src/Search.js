@@ -42,23 +42,24 @@ function Search(props) {
             {randomOrSearch.name && <img className="searchCard" src={randomOrSearch.images?.large} alt={"okay"}/>}
             <br />
             <br />
-
-            <form className="search" onSubmit={(event) => {
-                event.preventDefault()
-                searchArray()
-            }}>
-                <input placeholder="Pokemon Name" type="text" name="name" value={name.name.toLowerCase()} onChange={handleChange} />
-                {error.length > 0 && <p style={{color: "red"}}>{error}</p>}
-                <button >Search!</button>
-                <br />
-                <br />
-            </form> 
-                <div>
-                    <Link className="search" to={location}>Click For More Information On Your Result!</Link>
+            <div className="searchLinkButton">
+                <form className="search" onSubmit={(event) => {
+                    event.preventDefault()
+                    searchArray()
+                }}>
+                    <input placeholder="Pokemon Name" type="text" name="name" value={name.name.toLowerCase()} onChange={handleChange} />
+                    {error.length > 0 && <p style={{color: "red"}}>{error}</p>}
+                    <button >Search!</button>
                     <br />
-                </div> 
-            <br />
-            <button onClick={() => {randomPokemon()}}>Search for a Random Pokemon!</button>
+                    <br />
+                </form> 
+                    <div>
+                        <Link className="search" to={location}>Click For More Information On Your Result!</Link>
+                        <br />
+                    </div> 
+                <br />
+                <button onClick={() => {randomPokemon()}}>Search for a Random Pokemon!</button>
+            </div>
         </div>
     )
 }

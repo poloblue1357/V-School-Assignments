@@ -1,10 +1,12 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import "./styles.css"
 import questionsQuiz from "./questionsQuiz"
-import {Link} from "react-router-dom"
+import {useHistory} from "react-router-dom"
 import QuizQuestion from "./quizQuestion"
 
 function Quiz(props) {
+
+    const history = useHistory()
 
     const [quizAnswer, setQuizAnswers] = useState({
         q1Ans: 0,
@@ -20,11 +22,11 @@ function Quiz(props) {
     const [totalPoints, setTotalPoints] = useState(0)
 
     const calculatePoints = () => {
-        setTotalPoints(quizAnswer.q1Ans + quizAnswer.q2Ans + quizAnswer.q3Ans + quizAnswer.q4Ans + quizAnswer.q5Ans)
+        findPokemon(quizAnswer.q1Ans + quizAnswer.q2Ans + quizAnswer.q3Ans + quizAnswer.q4Ans + quizAnswer.q5Ans)
     }
     
     const handleSubmit = (event) => {
-        alert("Your answers were submitted! Click the link for result!")
+        // alert("Your answers were submitted! Click the link for result!")
         event.preventDefault()
         calculatePoints()
         console.log(totalPoints)
@@ -36,41 +38,47 @@ function Quiz(props) {
         ) 
     }) 
 
-    const [image, setImage] = useState({imageSrc: '', imageAlt: ''})
-    const findPokemon = () => {
+    // const [image, setImage] = useState({imageSrc: '', imageAlt: ''})
+    const findPokemon = (totalPoints) => {
+        const state = {}
         if(totalPoints > 0 && totalPoints < 6) {
-            setImage({
-                imageSrc: "https://images.pokemontcg.io/dp4/3_hires.png", imageAlt: "Darkrai"
-            })
+            
+                state.imageSrc= "https://images.pokemontcg.io/dp4/3_hires.png" 
+                state.imageAlt= "Darkrai"
+            
         } else if(totalPoints > 5 && totalPoints < 11) {
-            setImage ({ 
-                imageSrc: "https://images.pokemontcg.io/basep/1_hires.png", imageAlt: "Pikachu"
-            })
+            
+                state.imageSrc= "https://images.pokemontcg.io/basep/1_hires.png" 
+                state.imageAlt= "Pikachu"
+           
         } else if(totalPoints > 10 && totalPoints < 16) {
-            setImage ({
-                imageSrc: "https://images.pokemontcg.io/bw5/1_hires.png", imageAlt: "Bulbasaur"
-            })
+            
+                state.imageSrc= "https://images.pokemontcg.io/bw5/1_hires.png" 
+                state.imageAlt= "Bulbasaur"
+            
         } else if(totalPoints > 15) {
-            setImage ({
-                imageSrc: "https://images.pokemontcg.io/sm75/1_hires.png", imageAlt: "Charmander"
-            })
+            
+                state.imageSrc= "https://images.pokemontcg.io/sm75/1_hires.png" 
+                state.imageAlt= "Charmander"
+            
         }
-    }
-    const location = {
-        pathname: "/quiz/quizresult",
-        state: {image}
+        const location = {
+            pathname: "/quiz/quizresult",
+            state: state
+        }
+        history.push(location)
     }
 
-    useEffect(() => {
-        findPokemon()
-    }, [totalPoints])
-    console.log(image)
+    // useEffect(() => {
+    //     findPokemon()
+    // }, [totalPoints])
+    // console.log(image)
 
     // const tryingHistory = (e) => {
     //     e.preventDefault()
     //     console.log("waiting three seconds")
     //     setTimeout(() => {
-    //         history.push("/quiz/quizresult")
+    //         history.pushState("/quiz/quizresult")
     //     }, 3000)
     // }
 
@@ -92,9 +100,9 @@ function Quiz(props) {
                 {survey}
                 <hr />
                 
-                    <button style={{margin: "10px", backgroundColor: "black", color: "orange", fontSize: "20px"}}>Click to Lock in Your Answers!</button>
+                    <button style={{margin: "10px", backgroundColor: "black", color: "orange", fontSize: "20px"}}>Find Your Pokemon!</button>
                     <br />
-                    <Link to={location}  style={{fontSize: "25px"}}>Click To See Result!</Link>
+                    {/* <Link to={location}  style={{fontSize: "25px"}}>Click To See Result!</Link> */}
             </form>  
         </div>
     )
