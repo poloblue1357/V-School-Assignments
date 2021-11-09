@@ -12,8 +12,8 @@ function App() {
         <h1>Welcome to TradeView!</h1>
         <div className="links">
           <Link to="/" className="navbarLinks">Home</Link>
-          <Link to="/tickerSearch" className="navbarLinks">Ticker Search</Link>
-          <Link to="/economicIndicators" className="navbarLinks">Economics Indicators</Link>
+          <Link to="/tickersearch" className="navbarLinks">Ticker Search</Link>
+          <Link to="/indicators" className="navbarLinks">Economics Indicators</Link>
           <Link to="/watchlist" className="navbarLinks">Watchlist</Link>
         </div>
       </nav>

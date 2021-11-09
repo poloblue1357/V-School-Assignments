@@ -35,7 +35,7 @@ const inventoryItems = [
 ]
 inventoryRouter.route("/")
     .get((req, res) => {
-        res.send(inventoryItems)
+        return res.send(inventoryItems)
     })
 
 inventoryRouter.get("/:type", (req, res) => {

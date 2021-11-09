@@ -31,7 +31,7 @@ function Inputs() {
                 <input placeholder="Last Name" name="lastName" value={inputData.lastName} onChange={handleChange}/>
                 <input placeholder="Amount in $" name="bountyAmount" value={inputData.bountyAmount} onChange={handleChange}/>
                 <input placeholder="Sith or Jedi" name="type" value={inputData.type} onChange={handleChange}/>
-                <input placeholder="Alive? True or False" name="isAlive" value={inputData.isAlive} onChange={handleChange}/>
+                <input placeholder="Alive? true or false" name="isAlive" value={inputData.isAlive} onChange={handleChange}/>
                 <button type="submit">Submit</button>
             </form>
             <br />
