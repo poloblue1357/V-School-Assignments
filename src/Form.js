@@ -13,16 +13,16 @@ export default function Form(props) {
                         placeholder="Title"
                     />
                     <input
-                        name="desc"
-                        value={uglyContext.desc}
+                        name="description"
+                        value={uglyContext.description}
                         onChange={uglyContext.handleChange}
                         placeholder="Description"
                     />
                     <input
-                        name="imgURL"
-                        value={uglyContext.imgURL}
+                        name="imgUrl"
+                        value={uglyContext.imgUrl}
                         onChange={uglyContext.handleChange}
-                        placeholder="Image URL"
+                        placeholder="Image Url"
                     />
                     <br />
                     <button>Add a New Item</button>
