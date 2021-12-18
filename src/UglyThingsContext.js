@@ -4,6 +4,7 @@ const Context = React.createContext()
 
  function ContextProvider(props) {
     const init = {
+        id: "",
         title: "",
         description: "",
         imgUrl: ""
@@ -56,11 +57,13 @@ const Context = React.createContext()
     }
 
 
-    // const delete = (id) => {
-    //     axios.delete(`https://api.vschool.io/victor-navarro/thing/${id}`)
-    //     .then(response => alert("Ugly Thing Deleted"))
-    //     .catch(error => console.log(error))
-    // }
+    const deleteUglyThing = id => {
+        console.log(id)
+        axios.delete("https://api.vschool.io/victor-navarro/thing/" + id)
+        
+        //     getData()})
+        .catch(error => console.log(error))
+    }
 
 
 
@@ -68,12 +71,14 @@ const Context = React.createContext()
 
     return (
         <Context.Provider value={{
+            id: uglyThing.id,
             title: uglyThing.title,
             description: uglyThing.description,
             imgUrl: uglyThing.imgUrl,
             uglyThingsList,
             handleChange,
-            handleSubmit
+            handleSubmit,
+            deleteUglyThing
         }}>
             {props.children}
         </Context.Provider>
