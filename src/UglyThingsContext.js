@@ -16,10 +16,7 @@ const Context = React.createContext()
 
 
     useEffect(() => {
-        fetch("https://api.vschool.io/victor-navarro/thing/")
-        .then(res => res.json())
-        .then(data => {setUglyThingsList(data)})
-        .catch(error => console.log(error))
+        getData()
     },[])
 
 
@@ -60,8 +57,6 @@ const Context = React.createContext()
     const deleteUglyThing = id => {
         console.log(id)
         axios.delete("https://api.vschool.io/victor-navarro/thing/" + id)
-        
-        //     getData()})
         .catch(error => console.log(error))
     }
 
