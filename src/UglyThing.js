@@ -27,7 +27,7 @@ export default function UglyThing(props) {
         <button onClick={handleEdit}>Edit</button>
         <button onClick={() => context.deleteUglyThing(props.id)}>Delete</button>
         {context.uglyThing.isEditing ?
-            <EditableThing /> :
+            <EditableThing item={props.item}/> :
             null
         }
         </div>

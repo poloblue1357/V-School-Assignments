@@ -5,13 +5,14 @@ const Context = React.createContext()
  function ContextProvider(props) {
     const init = {
         isEditing: false,
-        title: "",
+        title: props.item?.title || "",
         description: "",
         imgUrl: ""
     }
 
     const [ uglyThingsList, setUglyThingsList ] = useState([])
     const [ uglyThing, setUglyThing ] = useState(init)
+
 
 
 
@@ -37,6 +38,8 @@ const Context = React.createContext()
 
 
 
+
+
     function addNewUglyThing(e) {
         e.preventDefault()
 
@@ -49,12 +52,12 @@ const Context = React.createContext()
     }
 
 
-    function editedThing(id, updatedThing) {
+    function submitEditedThing(id, updatedThing) {
+        console.log(updatedThing)
         axios.put(`https://api.vschool.io/victor-navarro/thing/${id}`, updatedThing)
         .then((res) => {
             setUglyThingsList(data => data.map(thing => thing._id === id ? res.data : thing))
         })
-        uglyThing.isEditing(false)
         .catch(error => console.log(error))
     }
 
@@ -75,25 +78,9 @@ const Context = React.createContext()
         console.log(uglyThing.isEditing)
     }
 
-
-    const [ updatedThing, setUpdatedthing ] = useState({
-        title: props.title,
-        imgUrl: props.imgUrl,
-        description: props.description
-    })
-
-    function handleChangeEdit(e) {
-        e.preventDefault()
-        const {name, value} = e.target
-        setUpdatedthing(input => ({...input, [name]: value}))
+    function cancelEdit() {
+        setUglyThing(prevState => (prevState.isEditing === false))
     }
-
-
-
-
-
-
-
 
 
 
@@ -104,10 +91,9 @@ const Context = React.createContext()
             setUglyThingsList,
             handleChange,
             addNewUglyThing,
-            editedThing,
+            submitEditedThing,
             toggleEdit,
-            handleChangeEdit,
-            updatedThing,
+            cancelEdit,
             deleteUglyThing
         }}>
             {props.children}
@@ -116,3 +102,11 @@ const Context = React.createContext()
 }
 
 export {ContextProvider, Context}
+
+
+
+
+
+
+
+
