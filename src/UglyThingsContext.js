@@ -4,7 +4,7 @@ const Context = React.createContext()
 
  function ContextProvider(props) {
     const init = {
-        id: "",
+        isEditing: false,
         title: "",
         description: "",
         imgUrl: ""
@@ -20,8 +20,14 @@ const Context = React.createContext()
     },[])
 
 
+    function getData(id)  {
+        axios.get("https://api.vschool.io/victor-navarro/thing/")
+        .then(res => {setUglyThingsList(res.data)})
+        .catch(error => console.log(error) )
+    }
 
-    const handleChange = (e) => {
+
+    function handleChange(e)  {
         const {value, name} = e.target
         setUglyThing(prevUglyThing => ({
             ...prevUglyThing,[name]: value
@@ -31,34 +37,61 @@ const Context = React.createContext()
 
 
 
-    const handleSubmit = (e) => {
+    function addNewUglyThing(e) {
         e.preventDefault()
 
         axios.post("https://api.vschool.io/victor-navarro/thing/", uglyThing)
         .then(() => getData())
         .catch(error => console.log(error) )
-        setUglyThingsList(prevList => ([...prevList, uglyThing]))
+        // setUglyThingsList(prevList => ([...prevList, uglyThing]))
         setUglyThing(init)
 
     }
 
 
-
-    const getData = () => {
-        axios.get("https://api.vschool.io/victor-navarro/thing/")
-        .then(res => {
-        console.log(res.data)
-        setUglyThingsList(res.data)
+    function editedThing(id, updatedThing) {
+        axios.put(`https://api.vschool.io/victor-navarro/thing/${id}`, updatedThing)
+        .then((res) => {
+            setUglyThingsList(data => data.map(thing => thing._id === id ? res.data : thing))
         })
-        .catch(error => console.log(error) )
-    }
-
-
-    const deleteUglyThing = id => {
-        console.log(id)
-        axios.delete("https://api.vschool.io/victor-navarro/thing/" + id)
+        uglyThing.isEditing(false)
         .catch(error => console.log(error))
     }
+
+
+
+
+    function deleteUglyThing (id) {
+        console.log(id)
+        axios.delete(`https://api.vschool.io/victor-navarro/thing/${id}`)
+        .then(() => setUglyThingsList(prevThing => {
+            return prevThing.filter(thing => thing._id !== id)
+        }))
+        .catch(error => console.log(error))
+    }
+
+    function toggleEdit() {
+        setUglyThing(prevState => ({isEditing: !prevState.isEditing}))
+        console.log(uglyThing.isEditing)
+    }
+
+
+    const [ updatedThing, setUpdatedthing ] = useState({
+        title: props.title,
+        imgUrl: props.imgUrl,
+        description: props.description
+    })
+
+    function handleChangeEdit(e) {
+        e.preventDefault()
+        const {name, value} = e.target
+        setUpdatedthing(input => ({...input, [name]: value}))
+    }
+
+
+
+
+
 
 
 
@@ -66,13 +99,15 @@ const Context = React.createContext()
 
     return (
         <Context.Provider value={{
-            id: uglyThing.id,
-            title: uglyThing.title,
-            description: uglyThing.description,
-            imgUrl: uglyThing.imgUrl,
+            uglyThing,
             uglyThingsList,
+            setUglyThingsList,
             handleChange,
-            handleSubmit,
+            addNewUglyThing,
+            editedThing,
+            toggleEdit,
+            handleChangeEdit,
+            updatedThing,
             deleteUglyThing
         }}>
             {props.children}
