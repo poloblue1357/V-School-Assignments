@@ -1,16 +1,38 @@
-import React, { useContext } from 'react'
+import React from 'react'
+import { useContext } from 'react/cjs/react.development'
 import "./index.css"
 import { Context } from './UglyThingsContext'
+import EditableThing from './EditableThing'
+
+
 
 export default function UglyThing(props) {
-    const uglyThingContext = useContext(Context)
+    const context = useContext(Context)
+
+
+    function handleEdit() {
+        context.toggleEdit()
+    }
+
     return (
-        <div className='card'>
-            <h2>{props.item.title}</h2>
-            <img src={props.item.imgUrl} alt={props.item.description} />
-            <p>{props.item.description}</p>
-            <button>Edit</button>
-            <button onClick={() => uglyThingContext.deleteUglyThing()}>Delete</button>
+       <div className='card'>
+
+        <div>
+            <h2>{props.title}</h2>
+            <img className='imagen' src={props.img} alt={props.description} />
+            <p>{props.description}</p>
+            <h3>{props.id}</h3>
+        </div>
+
+        <button onClick={handleEdit}>Edit</button>
+        <button onClick={() => context.deleteUglyThing(props.id)}>Delete</button>
+        {context.uglyThing.isEditing ?
+            <EditableThing /> :
+            null
+        }
         </div>
     )
 }
+
+
+
