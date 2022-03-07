@@ -23,3 +23,17 @@ app.use("/tvShows", require("./routes/tvshowRouter.js"))
 app.listen(9000, () => {
     console.log("The server is running on port 9000")
 })
+
+// ************** notes for module 6 *****************
+
+// install 'npm install jsonwebtoken'
+// install 'npm install dotenv' - add file to same level as server.js
+// install "npm install express-jwt"
+//      ADD dotenv to .gitignore file
+// create .env file and add: SECRET="correct horse battery staple"
+// add "require("dotenv").config();"
+// add "const expressJwt = require("express-jwt");"
+
+//# cd into your project root folder first (NOT inside the client folder)
+// npm install bcrypt
+// const bcrypt = require("bcrypt");

@@ -1,8 +1,8 @@
 import React from "react"
-import "./EcoIndicators.css"
+import "./EconomicIndicators.css"
 import CPImap from "./CPImap"
 
-function EcoIndicators() {
+function EconomicIndicators() {
 
     return (
         <div>
@@ -11,4 +11,4 @@ function EcoIndicators() {
     )
 }
 
-export default EcoIndicators
+export default EconomicIndicators
