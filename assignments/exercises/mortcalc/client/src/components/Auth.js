@@ -35,7 +35,7 @@ function Auth() {
   
     return (
       <div className="auth-container">
-        <h1>Beam Lending</h1>
+        <h1>Beam Lending!</h1>
         { !toggle ?
           <>
             <AuthForm 

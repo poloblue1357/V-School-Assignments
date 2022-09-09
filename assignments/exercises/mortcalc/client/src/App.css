@@ -1,5 +1,5 @@
 * {
-    background-color: lightgray;
+    background-color: lightsteelblue;
 }
 .navbarHeader {
     display: flex;
@@ -52,3 +52,14 @@
     padding: 10px;
     color: blue;
 }
+/* .auth-container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+} */
+.auth-container {
+    display: grid;
+    place-items: center;
+    min-height: 40vh;
+}
+

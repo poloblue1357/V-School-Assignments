@@ -17,7 +17,7 @@ statusRouter.get("/", (req, res, next) => {
 statusRouter.post("/", (req, res, next) => {
     // console.log("User", req.user)
     // console.log("body", req.body)
-    // req.body.user = req.user._id
+    req.body.user = req.user._id
     const newStatus = new Status(req.body)
     newStatus.user = req.user._id
     newStatus.save((err, savedStatus) => {

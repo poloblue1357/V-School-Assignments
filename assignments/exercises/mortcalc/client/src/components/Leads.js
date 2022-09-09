@@ -90,7 +90,7 @@ function Leads() {
                 <br />
                 <br />
                 <input placeholder="Email" type="text" name="email" value={context.email} onChange={context.handleChangeLeads}/>
-                <input placeholder="Current Rate" type="text" name="currentRate" value={context.currentRate} onChange={context.handleChangeLeads}/>
+                <input placeholder="Current Rate (percent)" type="text" name="currentRate" value={context.currentRate} onChange={context.handleChangeLeads}/>
                 <select id="googleReview" name="googleReview" value={context.googleReview} onChange={context.handleChangeLeads} style={{width: "150px"}}>
                     <option value={""}>Google Review:</option>
                     <option>Requested</option>

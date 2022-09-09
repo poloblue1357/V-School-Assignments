@@ -17,7 +17,7 @@ realtorRouter.get("/", (req, res, next) => {
 realtorRouter.post("/", (req, res, next) => {
     // console.log("User", req.user)
     // console.log("body", req.body)
-    // req.body.user = req.user._id
+    req.body.user = req.user._id
     const newRealtor = new Realtor(req.body)
     newRealtor.user = req.user._id
     newRealtor.save((err, savedRealtor) => {

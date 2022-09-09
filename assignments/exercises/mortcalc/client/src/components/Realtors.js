@@ -74,7 +74,7 @@ function Realtors() {
                 <br />
                 <input placeholder="Email" type="text" name="email" value={context.email} onChange={context.handleChangeRealtors}/>
                 <input placeholder="# of Contacts" type="text" name="numberOfContacts" onChange={context.handleChangeRealtors}/>
-                <input placeholder="Golfer" type="text" name="golfer" value={context.golfer} onChange={context.handleChangeRealtors}/>                
+                <input placeholder="Golfer - Yes or No" type="text" name="golfer" value={context.golfer} onChange={context.handleChangeRealtors}/>                
                 <input placeholder="Last Contact" type="text" name="lastContact" value={context.lastContact} onChange={context.handleChangeRealtors}/>
                 <input placeholder="Notes" type="text" name="notes" value={context.notes} onChange={context.handleChangeRealtors}/>
                 <button type="submit">Submit</button>

@@ -9,15 +9,13 @@ function Realtorsdisplay(props) {
         date: props.r.date,
         campaign: props.r.campaign,
         status: props.r.status,
-        loanType: props.r.loanType,
-        loanPurpose: props.r.loanPurpose,
         firstName: props.r.firstName,
         lastName: props.r.lastName,
-        coBorrower: props.r.coBorrower,
+        brokerage: props.r.brokerage,
         phone: props.r.phone,
         email: props.r.email,
-        currentRate: props.r.currentRate,
-        googleReview: props.r.googleReview,
+        numberOfContacts: props.r.numberOfContacts,
+        golfer: props.r.golfer,
         lastContact: props.r.lastContact,
         notes: props.r.notes
     })
@@ -39,16 +37,16 @@ function Realtorsdisplay(props) {
                         event.preventDefault()
                         toggleEdit()
                         
-                        context.editLeads(props.r._id, {date: editedRealtor.date, 
+                        context.editRealtors(props.r._id, {date: editedRealtor.date, 
                                                         campaign: editedRealtor.campaign, 
                                                         status: editedRealtor.status,
                                                         firstName: editedRealtor.firstName,
                                                         lastName: editedRealtor.lastName,
-                                                        coBorrower: editedRealtor.brokerage,
+                                                        brokerage: editedRealtor.brokerage,
                                                         phone: editedRealtor.phone,
                                                         email: editedRealtor.email,
-                                                        currentRate: editedRealtor.numberOfContacts,
-                                                        googleReview: editedRealtor.golfer,
+                                                        numberOfContacts: editedRealtor.numberOfContacts,
+                                                        golfer: editedRealtor.golfer,
                                                         lastContact: editedRealtor.lastContact,
                                                         notes: editedRealtor.notes
                                                         })

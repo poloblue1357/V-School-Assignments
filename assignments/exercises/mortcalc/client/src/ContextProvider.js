@@ -48,7 +48,7 @@ function MortgageContextProvider(props) {
         numberOfContacts: '',
         golfer: '',
         lastContact: '',
-        notes: '',
+        notes: ''
     }
 
     const [lead, setLead] = useState(initInputsLeads)
@@ -66,8 +66,6 @@ function MortgageContextProvider(props) {
     const [getStatusLeads, setGetStatusLeads] = useState([])
     const [statusRealtors, setStatusRealtors] = useState()
     const [getStatusRealtors, setGetStatusRealtors] = useState([])
-
-
 
     function signup(credentials) {
         axios.post("/auth/signup", credentials) 
@@ -139,11 +137,11 @@ function MortgageContextProvider(props) {
             .catch(err => console.log(err.response.data.errMsg))
     }
     function editLeads(_id, editedLead) {
-        userAxios.put(`http://localhost:7000api/leads/${_id}`, editedLead)
+        userAxios.put(`http://localhost:7000/api/leads/${_id}`, editedLead)
             .then(res => {
                 setGetLeads(prevLead1 => {
                     let getLeads1 = prevLead1.map(lead1 => lead1._id === _id ? res.data : lead1)
-                    console.log(getLeads1)
+                    // console.log(getLeads1)
                     return getLeads1
                 })
             })
@@ -172,12 +170,13 @@ function MortgageContextProvider(props) {
         userAxios.put(`http://localhost:7000/api/realtors/${_id}`, editedRealtor)
             .then(res => {
                 setGetRealtors(prevRealtor1 => {
-                    let getRealtors1 = prevRealtor1.getLeads.map(realtor1 => realtor1._id === _id ? res.data : realtor1)
-                    console.log(getRealtors1)
-                    return {getRealtors1}
+                    let getRealtors1 = prevRealtor1.map(realtor1 => realtor1._id === _id ? res.data : realtor1)
+                    // console.log(getRealtors1)
+                    return getRealtors1
                 })
             })
     }
+
     const handleChangeCampaignsLeads = (event) => {
         const {name, value} = event.target
         setCampaignLeads(value)

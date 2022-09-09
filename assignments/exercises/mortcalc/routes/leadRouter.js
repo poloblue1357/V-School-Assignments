@@ -17,7 +17,7 @@ leadRouter.get("/", (req, res, next) => {
 leadRouter.post("/", (req, res, next) => {
     // console.log("User", req.user)
     // console.log("body", req.body)
-    // req.body.user = req.user._id
+    req.body.user = req.user._id
     const newLead = new Lead(req.body)
     newLead.user = req.user._id
     newLead.save((err, savedLead) => {
