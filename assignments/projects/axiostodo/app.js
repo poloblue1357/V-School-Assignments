@@ -1,6 +1,6 @@
 // import axios from "axios"
 
-const axios = require("axios");
+const axios = require("axios").default;
 const list = document.getElementById("list")
 
 axios.get("https://api.vschool.io/dan/todo").then((response) => {
@@ -71,3 +71,9 @@ function createToDo(todo) {
 
 
 
+
+
+
+
+
+//  axios.put("url/todo/" + todo._id, {completed: e.target.checked} .then( alert))

@@ -29,12 +29,12 @@ for (var i = 0; i < enemies.length; i++) {
     console.log(whoWins(isThereKryptonite, enemies[i]));
 }
 
-function HowAttractedIsLoisLaneToMe() {
+function howAttractedIsLoisLaneToMe() {
     // 1 is not at all attracted, 10 is "super" attracted...
     return Math.floor((Math.random() * 10) + 1);
 }
 
-console.log( HowAttractedIsLoisLaneToMe()) ;
+console.log( howAttractedIsLoisLaneToMe()) ;
 
 var clarkKent = true;
 var superman =  false;

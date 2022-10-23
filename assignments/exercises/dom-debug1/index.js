@@ -8,7 +8,7 @@ document.getElementById("add").addEventListener("onclick", function(e){
 function createDropDown(){
     const dropDown = document.createElement("select")
     for (let i = 0; i < colors; i++){
-        const option = createElement("option") 
+        const option = document.createElement("option") 
         option.innerHTML = colors[i]
         option.value = colors[i]
         dropDown.append(option)

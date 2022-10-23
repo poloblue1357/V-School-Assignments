@@ -43,7 +43,19 @@ document.getElementById("theme-drop-down").addEventListener("change", function()
     right[1].style.backgroundColor = "black"
     right[1].style.color = "white"
 })
-
-
+function change() {
+    var e = document.getElementById("theme-drop-down");
+    var value = e.value;
+    var text = e.options[e.selectedIndex].text;
+    if(value === "theme-one") {
+        one()
+    } else if (value === "theme-two") {
+        two()
+    }
+}
+var e = document.getElementById("theme-drop-down");
+var value = e.value;
+var text = e.options[e.selectedIndex].text;
+console.log(value)
 
 
