@@ -9,12 +9,12 @@ class Player {
         this.hasStar = hasStar 
         this.gameActive = gameActive
     } 
-    setName(namePicked ) {
+    setName(namePicked) {
         this.name  = "mario"
       }
     gotHit() {
         if(this.hasStar === true) {
-            this.hasStar === false
+            this.hasStar = false
             this.status = "powered up"
             console.log("Your star protected you!")
         } else if(this.status == "powered up") {
@@ -40,7 +40,7 @@ class Player {
     }
     print() {
         randomRange()
-        console.log("Name: " + this.name, ", Coins: " + this.totalCoins, ", Status: " + this.status, ", Has star: " + this.hasStar)
+        console.log("Name: " + this.name,", Coins: " + this.totalCoins,", Status: " + this.status,", Has star: " + this.hasStar)
     }
 }
 function randomRange() {
@@ -66,3 +66,6 @@ setInterval(() => {
 
 const mario = new Player("Mario", 0, "small")
 mario.print()
+
+
+

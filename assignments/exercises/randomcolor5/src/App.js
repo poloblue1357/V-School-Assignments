@@ -14,10 +14,10 @@ class App extends React.Component {
     
     handleChange = () => {
         this.dontRepeatYourself()
-        
+        console.log("button working")
     }
     dontRepeatYourself = () => {
-        axios.get(`https://www.colr.org/json/color/random?timestamp=${new Date().getTime()}`)
+        axios.get("https://www.colr.org/json/color/random?timestamp=${new Date().getTime()}")
             .then(response => response.data)
             .then(data => {
                 this.setState({
