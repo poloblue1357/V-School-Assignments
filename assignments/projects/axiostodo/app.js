@@ -1,6 +1,6 @@
 // import axios from "axios"
 
-const axios = require("axios").default;
+// const axios = require("axios").default;
 const list = document.getElementById("list")
 
 axios.get("https://api.vschool.io/dan/todo").then((response) => {

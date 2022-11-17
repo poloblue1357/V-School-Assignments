@@ -16,7 +16,7 @@ document.addEventListener("wheel", function() {
     x.style.backgroundColor = "orange";
 })
 
-document.addEventListener("keypress", function() {
+document.addEventListener("keypress", function(event) {
     if( event.key === "b") {
         x.style.backgroundColor = "blue";
     } else if(event.key === "r") {

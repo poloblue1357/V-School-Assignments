@@ -1,4 +1,5 @@
-const colors = ["red", "blue", "green"]
+// require('disable-react-devtools')
+const colors = ["red", "blue", "green", "yellow", "orange"]
 
 document.getElementById("add").addEventListener("click", function(e){
     const subItem = createSubItem(e)
@@ -9,7 +10,7 @@ function createDropDown(){
     const dropDown = document.createElement("select")
     for (let i = 0; i < colors.length; i++){
         const option = document.createElement("option") 
-        option.textContent = colors[i]
+        option.innerHTML = colors[i]
         option.value = colors[i]
         dropDown.append(option)
     }

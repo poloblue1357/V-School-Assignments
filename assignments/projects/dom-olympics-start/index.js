@@ -28,34 +28,64 @@ const right = document.getElementsByClassName("message right")
 right[0].textContent = "I'm Count Dracula!"
 right[1].textContent = "You said that twice. Ha! Ha! Ha!"
 
+const messages = document.getElementsByClassName("messages")
 document.getElementById("clear-button").addEventListener("click", function() {
-    left[0].textContent = ""
-    left[1].textContent = ""
-    right[0].textContent = ""
-    right[1].textContent = ""
+    for(i = 0; i < messages.length; i++) { 
+        messages[i].textContent = ""
+    }
 })
 
-document.getElementById("theme-drop-down").addEventListener("change", function() {
-    left[0].style.backgroundColor = "red"
-    left[1].style.backgroundColor = "red"
-    right[0].style.backgroundColor = "black"
-    right[0].style.color = "white"
-    right[1].style.backgroundColor = "black"
-    right[1].style.color = "white"
-})
-function change() {
-    var e = document.getElementById("theme-drop-down");
-    var value = e.value;
-    var text = e.options[e.selectedIndex].text;
-    if(value === "theme-one") {
-        one()
-    } else if (value === "theme-two") {
-        two()
+const dropDown = document.getElementById("theme-drop-down")
+dropDown.addEventListener("change", function(e) {
+    console.log(messages[0].children)
+    // if(e.target.value === "theme-one") {
+    //     for(i = 0; i < left.length; i++) {
+    //         left[i].style.backgroundColor = "burlywood"
+    //         right[i].style.backgroundColor = "lightblue"
+    //         right[i].style.color = "black"
+    //     }
+    // } 
+    // else if(e.target.value === "theme-two") {
+    //     for(i = 0; i < left.length; i++) {
+    //         left[i].style.backgroundColor = "red"
+    //         right[i].style.backgroundColor = "black"
+    //         right[i].style.color = "white"
+    //     }
+    // }
+    for(i = 0; i < messages.length; i++) {
+        let x = messages[i] % 2 === 0
+        let y = messages[i] % 2 === 1
+        if(e.target.value === "theme-one") {
+            left[i].style.backgroundColor = "burlywood"
+            // y.style.backgroundColor = "lightblue"
+            // y.style.color = "black"
+        }
+        else if (e.target.value === "theme-two") {
+            left[i].style.backgroundColor = "red"
+            // y.style.backgroundColor = "black"
+            // y.style.color = "white"
+        }
     }
-}
-var e = document.getElementById("theme-drop-down");
-var value = e.value;
-var text = e.options[e.selectedIndex].text;
-console.log(value)
+})
+const main = document.getElementById("main")
+const test = document.createElement("div")
+test.innerHTML = "test"
+test.setAttribute("class", "message left")
+// messages.appendChild(test)
+
+// function change() {
+//     var e = document.getElementById("theme-drop-down");
+//     var value = e.value;
+//     var text = e.options[e.selectedIndex].text;
+//     if(value === "theme-one") {
+//         one()
+//     } else if (value === "theme-two") {
+//         two()
+//     }
+// }
+// var e = document.getElementById("theme-drop-down");
+// var value = e.value;
+// var text = e.options[e.selectedIndex].text;
+// console.log(value)
 
 
