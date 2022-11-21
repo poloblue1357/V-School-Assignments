@@ -14,6 +14,7 @@ class App extends React.Component {
             colors: ["black", "white", "white", "black"]
         }
     }
+    // prevState => prevState.colors === "white" ? "black" : "white"
     changeBW = () => {
         this.setState(prevState => {
             return {

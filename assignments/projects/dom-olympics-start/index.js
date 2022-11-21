@@ -29,43 +29,67 @@ right[0].textContent = "I'm Count Dracula!"
 right[1].textContent = "You said that twice. Ha! Ha! Ha!"
 
 const messages = document.getElementsByClassName("messages")
+const m = document.getElementsByClassName("message")
 document.getElementById("clear-button").addEventListener("click", function() {
-    for(i = 0; i < messages.length; i++) { 
-        messages[i].textContent = ""
+    // messages.remove()
+    // left[0].remove()
+    // right[0].remove()
+    console.log(m)
+    for(i = 0; i < m.length; i++) {
+        // right[i].remove()
+        // left[i].remove()
+        if(classList === "message") {
+            m[i].remove()
+        }
     }
+    // for(i = 0; i < messages.length; i++) { 
+        // messages[i].textContent = ""
+        // messages[i].style.backgroundColor = "red"
+        //remove
+    //     if(messages[i].classList.includes("left")) //left class
+    //         // do something
+    //     else 
+    //         //
+    // }
 })
 
 const dropDown = document.getElementById("theme-drop-down")
 dropDown.addEventListener("change", function(e) {
-    console.log(messages[0].children)
-    // if(e.target.value === "theme-one") {
-    //     for(i = 0; i < left.length; i++) {
-    //         left[i].style.backgroundColor = "burlywood"
-    //         right[i].style.backgroundColor = "lightblue"
-    //         right[i].style.color = "black"
-    //     }
-    // } 
-    // else if(e.target.value === "theme-two") {
-    //     for(i = 0; i < left.length; i++) {
-    //         left[i].style.backgroundColor = "red"
-    //         right[i].style.backgroundColor = "black"
-    //         right[i].style.color = "white"
-    //     }
-    // }
-    for(i = 0; i < messages.length; i++) {
-        let x = messages[i] % 2 === 0
-        let y = messages[i] % 2 === 1
-        if(e.target.value === "theme-one") {
+
+
+    // call messages list here 
+    // left = document.getElementsByClassName("left")
+    
+    // console.log(messages[0].children)
+    //classlist div.classlist
+    if(e.target.value === "theme-one") {
+        for(i = 0; i < left.length; i++) {
             left[i].style.backgroundColor = "burlywood"
-            // y.style.backgroundColor = "lightblue"
-            // y.style.color = "black"
+            right[i].style.backgroundColor = "lightblue"
+            right[i].style.color = "black"
         }
-        else if (e.target.value === "theme-two") {
+    } 
+    else if(e.target.value === "theme-two") {
+        for(i = 0; i < left.length; i++) {
             left[i].style.backgroundColor = "red"
-            // y.style.backgroundColor = "black"
-            // y.style.color = "white"
+            right[i].style.backgroundColor = "black"
+            right[i].style.color = "white"
         }
     }
+    // for(i = 0; i < messages.length; i++) {
+    //     let x = messages[i] % 2 === 0
+    //     let y = messages[i] % 2 === 1
+    //     if(e.target.value === "theme-one") {
+    //         left[i].style.backgroundColor = "burlywood"
+    //         // y.style.backgroundColor = "lightblue"
+    //         // y.style.color = "black"
+    //     }
+    //     else if (e.target.value === "theme-two") {
+    //         left[i].style.backgroundColor = "red"
+    //         // y.style.backgroundColor = "black"
+    //         // y.style.color = "white"
+    //     }
+    // }
 })
 const main = document.getElementById("main")
 const test = document.createElement("div")

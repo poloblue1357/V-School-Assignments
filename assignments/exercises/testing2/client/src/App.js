@@ -2,9 +2,17 @@ import React, {useEffect, useState} from "react"
 import axios from "axios"
 import Movie from "./components/Movie.js"
 import AddMovieForm from "./components/AddMovieForm.js"
+import Square from "./components/Square.js"
 
 function App() {
     const [movies, setMovies] = useState([])
+
+    const [colors, setColors] = useState(["black", "white", "white", "black"])
+    const allColors = colors.map(color => <Square color={color}/>)
+    function changeBW() {
+        setColors(prevColor => prevColor === "black" ? "white" : "black")
+    }
+
 
     function getMovies() {
         axios.get("/movies")
@@ -45,7 +53,9 @@ function App() {
     }}
     return (
         <div>
-            <AddMovieForm submit={addMovie} btnText="Add Movie"/>
+            {allColors}
+            <button onClick={() => changeBW()}>B/W</button>
+            {/* <AddMovieForm submit={addMovie} btnText="Add Movie"/>
             <h4>Filter by Genre</h4>
             <select onChange={handleFilter}>
                 <option value="reset">All Movies</option>
@@ -53,7 +63,7 @@ function App() {
                 <option value="comedy">Comedy</option>
                 <option value="drama">Drama</option>
             </select>
-            {movies.map(movie => <Movie {...movie} key={movie.title} deleteMovie={deleteMovie} editMovie={editMovie}/>)}
+            {movies.map(movie => <Movie {...movie} key={movie.title} deleteMovie={deleteMovie} editMovie={editMovie}/>)} */}
         </div>
     )
 }

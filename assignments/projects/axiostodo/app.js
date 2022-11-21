@@ -60,9 +60,11 @@ function createToDo(todo) {
         })
     })
     input.addEventListener("change" , e => {
-        axios.put("https://api.vschool.io/dan/todo/" + todo._id, {completed: e.target.checked}).then(response => {
+        axios.put("https://api.vschool.io/dan/todo/" + todo._id, {completed: e.target.checked})
+            .then(response => {
             h1.style.textDecoration = response.data.completed ? "line-through" : "none"
         })
+        console.log("testing")
     })
     if(todo.completed === true) {
         h1.style.textDecoration = "line-through"

@@ -24,6 +24,7 @@ while (alive) {
         alive = false
     }
 }
+
 function hasKey() {
     key = true
 }
