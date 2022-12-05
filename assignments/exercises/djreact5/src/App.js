@@ -14,6 +14,11 @@ class App extends React.Component {
             colors: ["black", "white", "white", "black"]
         }
     }
+
+    // function changeBW() {
+    //     setColors(prevColor => prevColor.map(color=>color==="black"? "white": "black")) // this will map through the array and return a new array of either black or white
+    //     console.log(scolors)
+    // }
     // prevState => prevState.colors === "white" ? "black" : "white"
     changeBW = () => {
         this.setState(prevState => {
