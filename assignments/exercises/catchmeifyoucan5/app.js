@@ -1,10 +1,10 @@
-// var input = "";
+// var input = "what is happening here";
 
 // try {
 //   if(input == "") {
 //     throw "Input can not be empty";
 //   } else if(input.length > 5) {
-//     throw "Input is to big";
+//     throw "Input is too big";
 //   } else {
 //     console.log("You code runs fine!");
 //   }
@@ -19,8 +19,10 @@
 // try {
 //     function sum(x, y) {
         
-//         if(typeof x == Number) {
-//             throw "not a number"
+//         if(typeof x !== "number") {
+//             throw "x not a number"
+//         } else if(typeof y !== "number") {
+//             throw "y not a number"
 //         }
 //         return x + y
 //     }
@@ -29,7 +31,7 @@
 //     console.log(err)
 // }
 
-
+// console.log(sum(3, 4))
 
 // 1B)
 // try {
@@ -72,4 +74,4 @@
 // catch(err) {
 //     console.log(err)
 // }
-// console.log(login("same", "1254abc"))
+// console.log(login("same", "1235abc"))

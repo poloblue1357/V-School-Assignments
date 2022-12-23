@@ -10,6 +10,4 @@ function Spot(props) {
     )
 }
 
-
-
 export default Spot
