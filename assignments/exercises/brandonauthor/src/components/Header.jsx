@@ -3,7 +3,7 @@
 function Header() {
 
     return (
-        <div>Brandon Patterson - Author / Father / Husband</div>
+        <div>Brandon Patterson - Author</div>
     )
 }
 
