@@ -3,7 +3,7 @@ import lastDesi from "./lastDesi.png"
 function Header() {
 
     return (
-        <div className="text-[#E0EC06]">
+        <div className="text-tYellow mb-4">
             Brandon Patterson - Author / Husband / Father
             <br />
             <br />
