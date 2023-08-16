@@ -17,6 +17,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    margin: {
+      4: "20px"
+    },
     screens: {
       sm: "480px", 
       md: "768px",

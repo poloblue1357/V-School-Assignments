@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-tBlue text-tYellow text-lg font-bold font-mono 
+    @apply bg-tBlue text-tYellow text-lg font-bold font-mono m-4
   }
 }
 

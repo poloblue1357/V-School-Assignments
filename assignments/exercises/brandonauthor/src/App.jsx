@@ -6,7 +6,7 @@ import './App.css'
 function App() {
 
   return (
-    <div className="bg-tBeige">
+    <div className="bg-tBeige pl-4">
       <Header />
       {/* <About /> */}
       <h1 className="text-5xl font-bold underline text-tDark mb-4 mt-5">
