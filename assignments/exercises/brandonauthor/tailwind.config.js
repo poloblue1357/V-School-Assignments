@@ -18,6 +18,7 @@ export default {
   ],
   theme: {
     margin: {
+      2: "10px",
       4: "20px"
     },
     screens: {
