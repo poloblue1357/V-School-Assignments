@@ -54,7 +54,9 @@ table {
 body {
 	-webkit-text-size-adjust: none;
 }
-
+/* * {
+	background: #1A202C
+} */
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -84,6 +86,7 @@ input, select, textarea {
 
 	body {
 		background: #fff;
+		/* background: #121212 */
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
