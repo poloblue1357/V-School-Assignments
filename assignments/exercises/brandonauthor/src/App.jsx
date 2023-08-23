@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from "./components/Header"
 import About from "./components/About"
+import Body from "./components/Body"
 import './App.css'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="bg-tBeige pl-4">
       <Header />
       {/* <About /> */}
+      <Body />
       <h1 className="text-5xl font-bold underline text-tDark mb-4 mt-5">
         Hello world!
       </h1>
