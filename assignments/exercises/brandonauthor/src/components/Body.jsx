@@ -4,9 +4,13 @@ function Body() {
     return(
         <div>
             <div>Header</div>
-            <div className="flex flex-row">
-                <div className="w-full bg-sky-500">Sidebar</div>
-                <div className="w-full bg-red-600">Main Content</div>
+            <div className="grid lg:grid-cols-3 gap-4 md:grid-cols-2">
+                <div className="bg-sky-500 p-6 rounded-lg">1</div>
+                <div className=" bg-red-500 p-6 rounded-lg">2</div>
+                <div className=" bg-red-500 p-6 rounded-lg">3</div>
+                <div className=" bg-red-500 p-6 rounded-lg">4</div>
+                <div className=" bg-red-500 p-6 rounded-lg">5</div>
+                <div className=" bg-red-500 p-6 rounded-lg">6</div>
             </div>
         </div>
     )
