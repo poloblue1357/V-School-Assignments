@@ -17,6 +17,9 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     margin: {
       2: "10px",
       4: "20px"
