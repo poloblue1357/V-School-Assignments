@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from "./components/Header"
 import About from "./components/About"
 import Body from "./components/Body"
+import Design from "./components/Design"
 import './App.css'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <h1 className="text-tBlue bg-tDark p-4 border-8 border-tYellow text-xs sm:text-base md:text-lg lg:text-3xl hover:underline">
         Hello world!
       </h1>
+      <Design />
     </div>
   )
 }

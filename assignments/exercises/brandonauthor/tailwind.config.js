@@ -12,6 +12,7 @@
 const plugin = require('tailwindcss/plugin')
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode:'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -21,6 +22,9 @@ export default {
       center: true,
     },
     margin: {
+      0: "0px",
+      0.5: "2.5px",
+      1: "5px",
       2: "10px",
       4: "20px"
     },

@@ -4,7 +4,63 @@
 
 @layer base {
   html {
-    @apply bg-tBlue text-tYellow text-lg font-bold font-mono m-2 p-2
+    @apply bg-tBlue text-tYellow text-lg font-serif m-2 p-2;
+  }
+
+  h1 {
+    @apply text-3xl font-bold mb-2;
+  }
+  h2 {
+    @apply text-xl font-semibold mb-1;
+  }
+  p {
+    @apply text-base;
+  }
+  a {
+    @apply underline text-tDark hover:text-tBlue transition decoration-wavy underline-offset-2
+  }
+
+  input,
+  select {
+    @apply text-slate-700 p-1 border border-slate-300 outline-none rounded mb-1
+  } 
+
+  select {
+    @apply pr-6
+  }
+
+  input[type="text"] {
+    @apply placeholder:italic disabled:bg-slate-300 
+  }
+  input[type="checkbox"] {
+    @apply  p-2 accent-purple-500 mr-1 font-medium mt-0.5 mb-0
+  }
+  label {
+    @apply text-sm text-slate-700 leading-4 font-medium
+  }
+
+
+
+  .btn {
+    @apply px-4 py-2 rounded-lg hover:transition hover:duration-300 hover:opacity-80 
+    disabled:bg-slate-300/30 hover:disabled:opacity-100
+  }
+  .btn-primary {
+    @apply bg-tBlue hover:bg-blue-500 text-white 
+  }
+  .btn-secondary {
+    @apply bg-slate-800 text-white 
+  }
+
+  .Select {
+    @apply w-1/2 border border-slate-300 outline-none rounded transition inline-block 
+   cursor-pointer text-black 
+  }
+  .Select .child {
+    @apply px-2 py-1
+  }
+  .Select ul li {
+    @apply hover:bg-slate-100
   }
 }
 
