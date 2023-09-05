@@ -3,14 +3,16 @@ import Header from "./components/Header"
 import About from "./components/About"
 import Body from "./components/Body"
 import Design from "./components/Design"
+import Sidebar from "./components/Sidebar"
 import './App.css'
 
 function App() {
 
   return (
-    <div className="bg-tBeige">
+    <div className="">
       <Header />
-      {/* <About /> */}
+      <Sidebar />
+      <About />
       <Body />
       <div className="container px-2 columns-lg">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi dolor possimus vel illo voluptatibus earum at nemo dignissimos quos, sint et incidunt beatae. Blanditiis neque omnis id porro tenetur.</p>

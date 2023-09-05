@@ -48,7 +48,8 @@ export default {
         tYellow: "#E0EC06",
         tBlue: "#3C7A9A",
         tBeige: "#998B88",
-        tOlive: "#9C9333"
+        tOlive: "#9C9333",
+        t11: "#0f0f0f"
       }
     },
   },

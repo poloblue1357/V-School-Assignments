@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-tBlue text-tYellow text-lg font-serif m-2 p-2;
+    @apply bg-tBlue text-tYellow text-lg font-serif;
   }
 
   h1 {
@@ -54,7 +54,7 @@
 
   .Select {
     @apply w-1/2 border border-slate-300 outline-none rounded transition inline-block 
-   cursor-pointer text-black 
+    cursor-pointer text-black 
   }
   .Select .child {
     @apply px-2 py-1
