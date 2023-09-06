@@ -5,14 +5,19 @@ import Body from "./components/Body"
 import Design from "./components/Design"
 import Sidebar from "./components/Sidebar"
 import './App.css'
+import mountains1 from "./components/mountains1.jpeg"
+import mountains2 from "./components/mountains2.jpeg"
+import mountains3 from "./components/mountains3.jpeg"
+import mountains4 from "./components/mountains4.jpeg"
 
 function App() {
 
   return (
     <div className="">
       <Header />
-      <Sidebar />
-      <About />
+      {/* <Sidebar /> */}
+      {/* <About /> */}
+      <img src={mountains1} />
       <Body />
       <div className="container px-2 columns-lg">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi dolor possimus vel illo voluptatibus earum at nemo dignissimos quos, sint et incidunt beatae. Blanditiis neque omnis id porro tenetur.</p>

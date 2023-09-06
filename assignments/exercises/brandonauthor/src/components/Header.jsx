@@ -1,4 +1,5 @@
 import lastDesi from "./lastDesi.png"
+import {useState} from "react"
 
 function Header() {
 
@@ -23,10 +24,21 @@ function Header() {
     //     </div>
         
     // )
+
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleSidebar = () => {
+        isOpen === true ? setIsOpen(false) : setIsOpen(true)
+    }
     return (
         <div>
             <span className="block font-bold h-44 leading-[44px] w-screen">
                 <div className="text-white bg-[#222] pl-[1em]">Brandon Patterson - Author</div>
+                <div>
+                    <div onClick={toggleSidebar} className="">
+                        <i></i>
+                    </div>
+                </div>
             </span>
         </div>
     )

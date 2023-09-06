@@ -2,7 +2,7 @@
 
 function Body() {
     return(
-        <div className="pb-6">
+        <div className="pt-6 pb-6">
             <div>Header</div>
             <div className="grid lg:grid-cols-2 gap-4 md:grid-cols-2 pb-4 hover:blur-sm">
                 <div className="bg-sky-500 p-6 rounded-lg">1</div>
