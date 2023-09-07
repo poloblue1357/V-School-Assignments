@@ -1,5 +1,8 @@
 import lastDesi from "./lastDesi.png"
 import {useState} from "react"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faBars} from "@fortawesome/free-solid-svg-icons"
+import {library} from "@fortawesome/fontawesome-svg-core"
 
 function Header() {
 
@@ -32,14 +35,15 @@ function Header() {
     }
     return (
         <div>
-            <span className="block font-bold h-44 leading-[44px] w-screen">
-                <div className="text-white bg-[#222] pl-[1em]">Brandon Patterson - Author</div>
+            <nav className="block font-bold h-40 leading-[40px] w-screen">
+                <div className="bg-[#222] pl-[1em]">Brandon Patterson - Author</div>
                 <div>
-                    <div onClick={toggleSidebar} className="">
-                        <i></i>
+                    <div onClick={toggleSidebar} className="text-white h-[50px]">
+                        <i class="faBars" aria-hidden="true"></i>
+                        <FontAwesomeIcon icon="faBars"/>
                     </div>
                 </div>
-            </span>
+            </nav>
         </div>
     )
 }

@@ -11,13 +11,15 @@ import mountains3 from "./components/mountains3.jpeg"
 import mountains4 from "./components/mountains4.jpeg"
 
 function App() {
-
+  // h-[174px] 
   return (
     <div className="">
       <Header />
       {/* <Sidebar /> */}
       {/* <About /> */}
-      <img src={mountains1} />
+      <div className="aspect-w-16 aspect-h-4">
+        <img src={mountains3} className=""/>
+      </div>
       <Body />
       <div className="container px-2 columns-lg">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi dolor possimus vel illo voluptatibus earum at nemo dignissimos quos, sint et incidunt beatae. Blanditiis neque omnis id porro tenetur.</p>

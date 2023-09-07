@@ -10,6 +10,12 @@
     "build-css": "tailwindcss build src/index.css -o public/styles.css"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-regular-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "vite-plugin-favicons-inject": "^2.2.0"
