@@ -9,12 +9,16 @@ import mountains1 from "./components/mountains1.jpeg"
 import mountains2 from "./components/mountains2.jpeg"
 import mountains3 from "./components/mountains3.jpeg"
 import mountains4 from "./components/mountains4.jpeg"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {faBars} from "@fortawesome/free-solid-svg-icons"
+import {library} from "@fortawesome/fontawesome-svg-core"
 
 function App() {
   // h-[174px] 
   return (
     <div className="">
       <Header />
+      {/* <FontAwesomeIcon icon={faBars} /> */}
       {/* <Sidebar /> */}
       {/* <About /> */}
       <div className="aspect-w-16 aspect-h-4">

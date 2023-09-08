@@ -31,17 +31,16 @@ function Header() {
     const [isOpen, setIsOpen] = useState(false)
 
     const toggleSidebar = () => {
+        console.log("toggle working!", isOpen)
         isOpen === true ? setIsOpen(false) : setIsOpen(true)
     }
     return (
         <div>
-            <nav className="block font-bold h-40 leading-[40px] w-screen">
-                <div className="bg-[#222] pl-[1em]">Brandon Patterson - Author</div>
-                <div>
-                    <div onClick={toggleSidebar} className="text-white h-[50px]">
-                        <i class="faBars" aria-hidden="true"></i>
-                        <FontAwesomeIcon icon="faBars"/>
-                    </div>
+            <nav className="flex font-bold h-40 leading-[40px] w-full relative bg-[#222]">
+                <div className="bg-[#222] pl-[1em] w-full">Brandon Patterson - Author</div>
+                <div onClick={toggleSidebar} className="relative flex w-full place-items-center justify-end right-[20px]">
+                    <FontAwesomeIcon icon={faBars}/>
+                    {/* <i class="faBars" aria-hidden="true" className="text-white h-40 w-1/12 justify-end"></i> */}
                 </div>
             </nav>
         </div>
