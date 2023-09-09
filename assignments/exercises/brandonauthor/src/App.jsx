@@ -19,11 +19,11 @@ function App() {
     <div className="">
       <Header />
       {/* <FontAwesomeIcon icon={faBars} /> */}
-      {/* <Sidebar /> */}
       {/* <About /> */}
       <div className="aspect-w-16 aspect-h-4">
         <img src={mountains3} className=""/>
       </div>
+      <Sidebar />
       <Body />
       <div className="container px-2 columns-lg">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi dolor possimus vel illo voluptatibus earum at nemo dignissimos quos, sint et incidunt beatae. Blanditiis neque omnis id porro tenetur.</p>

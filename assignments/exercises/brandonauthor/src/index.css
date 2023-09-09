@@ -4,23 +4,22 @@
 
 @layer base {
   html {
-    @apply bg-tDark text-tYellow text-lg font-serif;
+    @apply bg-tDark text-tYellow font-serif grid-cols-4;
   }
-
   h1 {
-    @apply text-3xl font-bold mb-2;
+    @apply text-2xl
   }
   h2 {
-    @apply text-xl font-semibold mb-1;
+    @apply text-xl
   }
-  p {
-    @apply text-base;
+  h3 {
+    @apply text-lg
   }
-  a {
-    @apply underline text-tDark hover:text-tBlue transition decoration-wavy underline-offset-2
+  h4 {
+    @apply text-base
   }
 
-  input,
+  /* input,
   select {
     @apply text-slate-700 p-1 border border-slate-300 outline-none rounded mb-1
   } 
@@ -61,7 +60,7 @@
   }
   .Select ul li {
     @apply hover:bg-slate-100
-  }
+  } */
 }
 
 /* @import 'tailwindcss/base';

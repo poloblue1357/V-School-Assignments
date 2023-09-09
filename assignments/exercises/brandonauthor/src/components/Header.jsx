@@ -38,10 +38,11 @@ function Header() {
         <div>
             <nav className="flex font-bold h-40 leading-[40px] w-full relative bg-[#222]">
                 <div className="bg-[#222] pl-[1em] w-full">Brandon Patterson - Author</div>
-                <div onClick={toggleSidebar} className="relative flex w-full place-items-center justify-end right-[20px]">
-                    <FontAwesomeIcon icon={faBars}/>
-                    {/* <i class="faBars" aria-hidden="true" className="text-white h-40 w-1/12 justify-end"></i> */}
-                </div>
+                {/* <div onClick={toggleSidebar} className="flex w-full justify-end lg:hidden">
+                    <div className="h-40 w-[60px] bg-tBlue justify-center flex items-center">
+                        <FontAwesomeIcon icon={faBars} className="text-xl"/>
+                    </div>
+                </div> */}
             </nav>
         </div>
     )
