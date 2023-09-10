@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-tDark text-tYellow font-serif grid-cols-4;
+    @apply bg-tDark text-tYellow font-serif
   }
   h1 {
     @apply text-2xl
