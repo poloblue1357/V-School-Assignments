@@ -39,7 +39,7 @@ function Header() {
             <nav className="flex font-bold h-40 leading-[40px] w-full relative bg-[#222]">
                 <div className="bg-[#222] pl-[1em] w-full">Brandon Patterson - Author</div>
                 <div onClick={toggleSidebar} className="flex w-full justify-end lg:hidden">
-                    <div className="h-40 w-[60px] bg-tBeige justify-center flex items-center">
+                    <div className="h-40 w-[60px] bg-tBlue justify-center flex items-center">
                         <FontAwesomeIcon icon={faBars} className="text-xl"/>
                     </div>
                 </div>

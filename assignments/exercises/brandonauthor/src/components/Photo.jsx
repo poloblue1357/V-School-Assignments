@@ -2,8 +2,8 @@ import mountains3 from "./mountains3.jpeg"
 
 function Photo() {
     return (
-        <div className="flex h-52">
-            <img src={mountains3} className="h-fit"/>
+        <div className="col-span-8">
+            <img src={mountains3} className=""/>
         </div>
     )
 }

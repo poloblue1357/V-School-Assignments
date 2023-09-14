@@ -19,11 +19,11 @@ function App() {
   return (
     <div className="">
       <Header />
-      <div className="flex w-2/3">
-        <Photo className=""/>
-        {/* <About className=""/>  */}
+      <div className="grid grid-cols-12">
+        <Photo />
+        <Sidebar />
+        <About /> 
       </div>
-        <Sidebar className=""/>
       {/* <Body /> */}
       {/* <div className="container px-2 columns-lg">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore sequi dolor possimus vel illo voluptatibus earum at nemo dignissimos quos, sint et incidunt beatae. Blanditiis neque omnis id porro tenetur.</p>
