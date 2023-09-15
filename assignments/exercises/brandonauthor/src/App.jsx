@@ -20,9 +20,11 @@ function App() {
     <div className="">
       <Header />
       <div className="grid grid-cols-12">
-        <Photo />
+        <div className="grid col-start-1 col-end-9">
+          <Photo />
+          <About /> 
+        </div>
         <Sidebar />
-        <About /> 
       </div>
       {/* <Body /> */}
       {/* <div className="container px-2 columns-lg">
