@@ -18,6 +18,9 @@
   h4 {
     @apply text-base
   }
+  ul li  {
+    @apply underline underline-offset-4 text-lg transition hover:scale-150 
+  }
 
   /* input,
   select {
