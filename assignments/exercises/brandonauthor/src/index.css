@@ -4,22 +4,25 @@
 
 @layer base {
   html {
-    @apply bg-tDark text-tYellow font-serif
+    @apply bg-tDark text-tYellow font-serif 
   }
   h1 {
-    @apply text-2xl
+    @apply text-base leading-[40px] transition 
   }
   h2 {
     @apply text-xl
   }
   h3 {
-    @apply text-lg
+    @apply text-sm md:text-base
   }
   h4 {
     @apply text-base
   }
   ul li  {
     @apply underline underline-offset-4 text-lg transition hover:scale-150 
+  }
+  img {
+    
   }
 
   /* input,

@@ -12,8 +12,8 @@ function App() {
   return (
     <div className="">
       <Header />
-      <div className="grid grid-cols-12">
-        <div className="grid col-start-1 col-end-9">
+      <div className="">
+        <div className="">
           <Photo />
           <About /> 
         </div>
