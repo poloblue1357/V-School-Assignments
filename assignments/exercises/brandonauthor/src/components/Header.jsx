@@ -27,21 +27,29 @@ function Header() {
     //     </div>
         
     // )
+        {/* <div className="">
+            <nav className="flex font-bold h-40 leading-[40px] w-full relative bg-[#222]">
+                <h1 className="bg-[#222] pl-[1em] w-full">Brandon Patterson - Author</h1>
+                <div onClick={toggleSidebar} className="flex justify-end">
+                    <div className="h-40 w-[60px] bg-tBeige justify-center flex items-center">
+                        <FontAwesomeIcon icon={faBars} className="text-xl"/>
+                    </div>
+                </div>
+            </nav>
+        </div> */}
 
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
 
     const toggleSidebar = () => {
         console.log("toggle working!", isOpen)
         isOpen === true ? setIsOpen(false) : setIsOpen(true)
     }
     return (
-        <div className="lg:hidden">
+        <div>
             <nav className="flex font-bold h-40 leading-[40px] w-full relative bg-[#222]">
-                <h1 className="bg-[#222] pl-[1em] w-full">Brandon Patterson - Author</h1>
-                <div onClick={toggleSidebar} className="flex justify-end lg:hidden">
-                    <div className="h-40 w-[60px] bg-tBeige justify-center flex items-center">
-                        <FontAwesomeIcon icon={faBars} className="text-xl"/>
-                    </div>
+                <h1 className="pl-[1em] w-full">Brandon Patterson - Author</h1>
+                <div onClick={toggleSidebar} className="h-40 w-[50px] bg-tBeige justify-center items-center flex">
+                    <FontAwesomeIcon icon={faBars} className="text-xl"/>
                 </div>
             </nav>
         </div>

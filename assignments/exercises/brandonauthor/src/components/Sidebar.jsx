@@ -2,10 +2,7 @@ import bSmile from "./bSmile.jpeg"
 import {FaLinkedin} from "react-icons/fa"
 
 
-function Sidebar() {
-
-    return (
-        <div className="col-span-4 col-start-9 invisible lg:visible transition">
+        {/* <div className="col-span-4 col-start-9 transition">
             <div className="bg-tBeige sticky top-1 h-screen overflow-y-auto">
                 <div className="flex flex-col justify-center items-center space-y-5 h-full">
                     <img src={bSmile} className="rounded-full" height="100px" width="150px"/>
@@ -26,6 +23,12 @@ function Sidebar() {
                     </div>
                 </div>
             </div>
+        </div> */}
+function Sidebar() {
+
+    return (
+        <div>
+            
         </div>
     )
 }

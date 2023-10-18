@@ -1,8 +1,6 @@
 
 
-function Body() {
-    return(
-        <div className="pt-6 pb-6">
+        {/* <div className="pt-6 pb-6">
             <div>Header</div>
             <div className="grid lg:grid-cols-2 gap-4 md:grid-cols-2 pb-4">
                 <div className="bg-sky-500 p-6 rounded-lg">1</div>
@@ -23,6 +21,11 @@ function Body() {
             <div>
                 <button className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 rounded-lg">Save Changes</button>
             </div>
+        </div> */}
+function Body() {
+    return(
+        <div>
+            
         </div>
     )
 }
