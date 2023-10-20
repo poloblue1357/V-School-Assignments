@@ -20,6 +20,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "disable-react-devtools": "^1.0.0",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "typescript": "^5.2.2"
   }
 }
