@@ -1,8 +1,9 @@
 import lastDesi from "./lastDesi.png"
-import {useState} from "react"
+import {useState, useContext} from "react"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faBars} from "@fortawesome/free-solid-svg-icons"
 import {library} from "@fortawesome/fontawesome-svg-core"
+import { BrandonAuthorContext } from "../ContextProvider"
 
 function Header() {
 
@@ -37,18 +38,13 @@ function Header() {
                 </div>
             </nav>
         </div> */}
+        const context = useContext(BrandonAuthorContext)
 
-    const [isOpen, setIsOpen] = useState(true)
-
-    const toggleSidebar = () => {
-        console.log("toggle working!", isOpen)
-        isOpen === true ? setIsOpen(false) : setIsOpen(true)
-    }
     return (
         <div>
-            <nav className="flex font-bold h-40 leading-[40px] w-full relative bg-[#222]">
+            <nav className="flex font-bold h-40 leading-[40px] w-full relative bg-[#222] lg:hidden transition">
                 <h1 className="pl-[1em] w-full">Brandon Patterson - Author</h1>
-                <div onClick={toggleSidebar} className="h-40 w-[50px] bg-tBeige justify-center items-center flex">
+                <div onClick={context.toggleSidebar} className="h-40 w-[50px] bg-tBeige justify-center items-center flex">
                     <FontAwesomeIcon icon={faBars} className="text-xl"/>
                 </div>
             </nav>

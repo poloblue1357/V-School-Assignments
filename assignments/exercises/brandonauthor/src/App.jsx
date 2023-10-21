@@ -1,18 +1,24 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Header from "./components/Header"
 import About from "./components/About"
 import Body from "./components/Body"
 import Design from "./components/Design"
 import Sidebar from "./components/Sidebar"
 import Photo from "./components/Photo"
+import { BrandonAuthorContext } from './ContextProvider'
 import './App.css'
 
 function App() {
   // h-[174px] 
+
+  const context = useContext(BrandonAuthorContext)
   return (
     <div className="">
       <Header />
-      <Photo />
+      <div className="flex">
+        <Photo /> 
+        <Sidebar />
+      </div>
     </div>
   )
 }
