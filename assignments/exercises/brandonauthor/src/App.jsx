@@ -12,14 +12,20 @@ function App() {
   // h-[174px] 
 
   const context = useContext(BrandonAuthorContext)
-  
+
   return (
     <div className="">
-      <Header />
+    <Header />
+      {context.isOpen ?
       <div className="flex">
         <Photo /> 
         <Sidebar />
-      </div>
+      </div> 
+      :
+      <Photo /> 
+      }
+      {/* <Photo /> 
+      <Sidebar /> */}
     </div>
   )
 }
