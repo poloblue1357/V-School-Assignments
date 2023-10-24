@@ -28,7 +28,7 @@
 // }
 class Zeus {
 
-    private _courseCount = 1
+    protected _courseCount = 1
 
     readonly city: string = "Jaipur"
     constructor(
@@ -55,6 +55,13 @@ class Zeus {
             throw new Error("Course count should be more than 1")
         }
         this._courseCount = courseNum
+    }
+}
+
+class SubUser extends Zeus {
+    isFamily: boolean = true
+    changeCourseCount() {
+        this._courseCount = 4
     }
 }
 
