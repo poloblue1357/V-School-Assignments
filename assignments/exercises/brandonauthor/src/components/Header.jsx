@@ -10,11 +10,16 @@ function Header() {
         const context = useContext(BrandonAuthorContext)
 
     return (
-        <div>
+        <div className="grid">
             <nav className="flex font-bold h-40 leading-[40px] w-full relative bg-[#222] lg:hidden transition">
+                <div className="grid col-start-1 col-end-5">
+
                 <h1 className="pl-[1em] w-full">Brandon Patterson - Author</h1>
-                <div onClick={context.toggleSidebar} className="h-40 w-[50px] bg-tBeige justify-center items-center flex">
-                    <FontAwesomeIcon icon={faBars} className="text-xl"/>
+                </div>
+                <div className="grid col-start-5 col-end-7 bg-tBeige">
+                    <div onClick={context.toggleSidebar} className="h-40 w-[50px] bg-tBeige justify-center items-center flex">
+                        <FontAwesomeIcon icon={faBars} className="text-xl"/>
+                    </div>
                 </div>
             </nav>
         </div>

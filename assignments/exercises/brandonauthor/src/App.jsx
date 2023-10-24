@@ -16,16 +16,10 @@ function App() {
   return (
     <div className="">
     <Header />
-      {context.isOpen ?
-      <div className="flex">
+      <div className="grid grid-cols-6">
         <Photo /> 
         <Sidebar />
-      </div> 
-      :
-      <Photo /> 
-      }
-      {/* <Photo /> 
-      <Sidebar /> */}
+      </div>
     </div>
   )
 }
