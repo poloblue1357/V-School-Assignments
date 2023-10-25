@@ -14,12 +14,11 @@ function App() {
   const context = useContext(BrandonAuthorContext)
 
   return (
-    <div className="">
-    <Header />
-      <div className="grid grid-cols-6">
-        <Photo /> 
-        <Sidebar />
-      </div>
+    <div className="grid">
+      <Header />
+      <Photo />
+      <About /> 
+      <Sidebar />
     </div>
   )
 }

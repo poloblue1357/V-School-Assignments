@@ -9,8 +9,9 @@ function Sidebar() {
     const context = useContext(BrandonAuthorContext)
 
     return (
-        <div className="grid col-start-5 col-end-7 w-full h-full">
+        <div className="grid col-start-5 col-end-7 w-full row-start-1 row-end-5 h-screen sticky top-0">
             <div className=" bg-tBeige flex flex-col justify-center items-center space-y-5 h-full w-full">
+                <div className="h-[40px] bg-tBeige"></div>
                 <img src={bSmile} className="rounded-full h-[100px] w-[150px]"/>
                 <div className="justify-center items-center flex flex-col space-y-2">
                     <h3 className="font-bold">Brandon Patterson</h3>
