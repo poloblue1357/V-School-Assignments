@@ -10,7 +10,7 @@ function Header() {
         const context = useContext(BrandonAuthorContext)
 
     return (
-        <div className="grid col-start-1 col-end-5 row-start-1 row-end-2">
+        <div className="">
             <nav className="flex font-bold h-40 leading-[40px] w-full bg-[#222] lg:hidden transition">
                 <h1 className="pl-[1em] w-full">Brandon Patterson - Author</h1>
                 <div onClick={context.toggleSidebar} className="h-40 w-[50px] bg-tBeige justify-center items-center flex">

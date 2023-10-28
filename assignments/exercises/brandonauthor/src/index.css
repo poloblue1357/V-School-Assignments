@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply bg-tDark text-tYellow font-serif grid-cols-6 grid-rows-6
+  body {
+    @apply bg-tDark text-tYellow font-serif grid-cols-5 grid-rows-6
   }
 
   ul li  {

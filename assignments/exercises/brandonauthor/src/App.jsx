@@ -15,10 +15,18 @@ function App() {
 
   return (
     <div className="grid">
-      <Header />
-      <Photo />
-      <About /> 
-      <Sidebar />
+      <div className='col-start-1 col-end-5 row-start-1 row-end-2'>
+        <Header />
+      </div>
+      <div className='col-start-1 col-end-4 row-start-2 row-end-3'>
+        <Photo />
+      </div>
+      <div className='col-start-1 row-start-3'>
+        <About /> 
+      </div>
+      <div className='col-start-4 row-start-2'>
+        <Sidebar />
+      </div>
     </div>
   )
 }
