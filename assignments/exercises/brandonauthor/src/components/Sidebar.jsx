@@ -9,25 +9,23 @@ function Sidebar() {
     const context = useContext(BrandonAuthorContext)
 
     return (
-        <div className="col-start-4 col-end-5 w-full row-start-1 row-end-5 h-screen sticky top-0">
-            <div className=" bg-tBeige flex flex-col justify-center items-center space-y-5 h-full w-full">
-                <div className="h-[40px] bg-tBeige"></div>
-                <img src={bSmile} className="rounded-full h-[100px] w-[150px]"/>
-                <div className="justify-center items-center flex flex-col space-y-2">
-                    <h3 className="font-bold">Brandon Patterson</h3>
-                    <h4 className="font-bold">Based in Utah, USA</h4>
-                </div>
-                <ul className=" italic space-y-2 w-full space-evenly items-center flex flex-col">
-                    <li className=""><a className=" hover:underline decoration-3 hover:text-bold">Home</a></li>
-                    <li className=""><a className="">Book</a></li>
-                    <li className=""><a className="">About</a></li>
-                    <li className=""><a className="">Contact</a></li>
-                </ul>
-                <div className="text-2xl w-full bg-tBeige justify-center flex items-center bottom-0">
-                    <a target="_blank" href="https://www.linkedin.com/in/brandon-patterson-author/">
-                        <FaLinkedin />
-                    </a>
-                </div>
+        <div className=" bg-tBeige flex flex-col justify-center items-center space-y-5 h-full w-full">
+            <div className="h-[40px] bg-tBeige"></div>
+            <img src={bSmile} className="rounded-full h-[100px] w-[150px]"/>
+            <div className="justify-center items-center flex flex-col space-y-2">
+                <h3 className="font-bold">Brandon Patterson</h3>
+                <h4 className="font-bold">Based in Utah, USA</h4>
+            </div>
+            <ul className=" italic space-y-2 w-full space-evenly items-center flex flex-col">
+                <li className=""><a className=" hover:underline decoration-3 hover:text-bold">Home</a></li>
+                <li className=""><a className="">Book</a></li>
+                <li className=""><a className="">About</a></li>
+                <li className=""><a className="">Contact</a></li>
+            </ul>
+            <div className="text-2xl w-full bg-tBeige justify-center flex items-center bottom-0">
+                <a target="_blank" href="https://www.linkedin.com/in/brandon-patterson-author/">
+                    <FaLinkedin />
+                </a>
             </div>
         </div>
     )

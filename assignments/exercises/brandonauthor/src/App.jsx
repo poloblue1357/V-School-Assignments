@@ -14,17 +14,19 @@ function App() {
   const context = useContext(BrandonAuthorContext)
 
   return (
-    <div className="grid">
-      <div className='col-start-1 col-end-5 row-start-1 row-end-2'>
+    <div className="grid grid-cols-4 ">
+      <div className='col-start-1 col-end-4 row-start-1 row-end-2'>
         <Header />
       </div>
       <div className='col-start-1 col-end-4 row-start-2 row-end-3'>
         <Photo />
       </div>
-      <div className='col-start-1 row-start-3'>
+      {/* <div>col-start-1 col-end-4 row-start-3 row-end-6</div> */}
+      <div className='col-start-1 col-end-4 row-start-3 row-end-4'>
         <About /> 
       </div>
-      <div className='col-start-4 row-start-2'>
+      {/* <div>col-start-4 col-end-5 w-full row-start-1 row-end-5 h-screen sticky top-0</div> */}
+      <div className='col-start-4 col-end-5 row-start-1 row-end-4'>
         <Sidebar />
       </div>
     </div>
