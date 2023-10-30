@@ -13,3 +13,4 @@ function getHero() {
 }
 hero = getHero();
 console.log(greetings);
+//# sourceMappingURL=variableMe.js.map

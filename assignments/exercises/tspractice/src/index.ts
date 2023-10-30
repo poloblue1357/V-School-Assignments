@@ -26,44 +26,85 @@
 //         this.name = name;
 //     }
 // }
-class Zeus {
+// class Zeus {
 
-    protected _courseCount = 1
+//     protected _courseCount = 1
 
-    readonly city: string = "Jaipur"
-    constructor(
-        public email: string, 
-        public name: string,
-        private userId?: string
-        ){
-    }
+//     readonly city: string = "Jaipur"
+//     constructor(
+//         public email: string, 
+//         public name: string,
+//         private userId?: string
+//         ){
+//     }
 
-    private deleteToken() {
-        console.log("Token deleted")
-    }
+//     private deleteToken() {
+//         console.log("Token deleted")
+//     }
 
-    get getAppleEmail():string {
-        return `apple${this.email}`
-    }
+//     get getAppleEmail():string {
+//         return `apple${this.email}`
+//     }
 
-    get courseCount(): number {
-        return this._courseCount
-    }
-    // set has no return type
-    set courseCount(courseNum) {
-        if(courseNum <= 1) {
-            throw new Error("Course count should be more than 1")
-        }
-        this._courseCount = courseNum
-    }
-}
+//     get courseCount(): number {
+//         return this._courseCount
+//     }
+//     // set has no return type
+//     set courseCount(courseNum) {
+//         if(courseNum <= 1) {
+//             throw new Error("Course count should be more than 1")
+//         }
+//         this._courseCount = courseNum
+//     }
+// }
 
-class SubUser extends Zeus {
-    isFamily: boolean = true
-    changeCourseCount() {
-        this._courseCount = 4
-    }
-}
+// class SubUser extends Zeus {
+//     isFamily: boolean = true
+//     changeCourseCount() {
+//         this._courseCount = 4
+//     }
+// }
 
-const hitesh = new Zeus("d@d.com", "hitesh")
+// const hitesh = new Zeus("d@d.com", "hitesh")
 // hitesh.name 
+
+
+console.log("Hello World!")
+
+let age: number = 20;
+let testing: string = "testing"
+
+if(age < 50) {
+    age += 10
+}
+
+let sales = 123_456_789;
+let course = "TypeScript";
+let is_published = true;
+let level
+
+function render(document: string) {
+    console.log(document)
+}
+
+let numbers: number[] = []
+numbers.forEach(n => n.toString)
+
+// A tuple is a typed array with a pre-defined length and types for each index.
+
+let pUser: [number, string] = [1, "dan"]
+pUser[0].toString
+
+// An enum is a special "class" that represents a group of constants (unchangeable variables).
+// Enums come in two flavors string and numeric.
+
+// const small = 1
+// const medium = 2
+// const large = 3
+
+// PascalCase
+const enum Size { Small = 1, Medium, Large }
+let mySize: Size = Size.Medium;
+console.log(mySize)
+
+

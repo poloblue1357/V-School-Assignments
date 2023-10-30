@@ -36,3 +36,4 @@
 // let seatAllotment: "aisle" | "middle" | "window"
 // seatAllotment = "aisle"
 // // seatAllotment = "crew"
+//# sourceMappingURL=myUnion.js.map

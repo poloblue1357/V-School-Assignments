@@ -12,3 +12,4 @@ var SeatChoice;
     SeatChoice[SeatChoice["FOURTH"] = 5] = "FOURTH";
 })(SeatChoice || (SeatChoice = {}));
 const hcSeat = SeatChoice.AISLE;
+//# sourceMappingURL=myEnums.js.map

@@ -7,3 +7,4 @@ let rgb = [255, 123, 112];
 const newUser = [112, "example@google.com"];
 newUser[1] = "hc.com";
 newUser.push();
+//# sourceMappingURL=myTupEnums.js.map

@@ -8,3 +8,4 @@ let myUser = {
 };
 myUser.email = "d@gmail.com";
 // myUser._id = "asa"
+//# sourceMappingURL=myObjects.js.map

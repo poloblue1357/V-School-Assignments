@@ -14,3 +14,4 @@
 // superHeros.push("spiderman")
 // heroPower.push(2)
 // allUsers.push({name: "thor", isActive: false})
+//# sourceMappingURL=myArray.js.map

@@ -35,3 +35,4 @@ function consoleError(errmsg) {
 function handleError(errmsg) {
     throw new Error(errmsg);
 }
+//# sourceMappingURL=myfunctions.js.map
