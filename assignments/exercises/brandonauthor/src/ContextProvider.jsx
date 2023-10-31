@@ -5,6 +5,7 @@ const BrandonAuthorContext = React.createContext()
 function BrandonAuthorContextProvider(props) {
 
     const [isOpen, setIsOpen] = useState(true)
+    const [width, setWidth] = useState(window.innerWidth)
 
     const toggleSidebar = () => {
         console.log("toggle working!", isOpen)

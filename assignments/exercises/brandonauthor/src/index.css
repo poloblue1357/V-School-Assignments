@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply bg-tDark text-tYellow font-serif grid-rows-3
+    @apply bg-tDark text-tYellow font-serif grid-rows-5
   }
 
   ul li  {

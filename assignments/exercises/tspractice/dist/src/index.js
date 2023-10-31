@@ -75,4 +75,29 @@ let pUser = [1, "dan"];
 pUser[0].toString;
 let mySize = 2 /* Size.Medium */;
 console.log(mySize);
+function calculateTax(income, taxYear = 2022) {
+    if (taxYear < 2022) {
+        return income * 1.2;
+    }
+    return income * 1.3;
+}
+calculateTax(10000, 2023);
+let employee = {
+    id: 1,
+    name: "dan",
+    retire: (date) => {
+        console.log(date);
+    }
+};
+function kgToLbs(weight) {
+    //Narrowing
+    if (typeof weight === "number") {
+        return weight * 2.2;
+    }
+    else {
+        return parseInt(weight) * 2.2;
+    }
+}
+kgToLbs(10);
+kgToLbs("10");
 //# sourceMappingURL=index.js.map
