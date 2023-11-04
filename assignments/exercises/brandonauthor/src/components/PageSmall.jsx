@@ -15,7 +15,7 @@ function PageSmall() {
         <div>
             {context.isOpen ?
                 <div className="grid grid-cols-7 transition duration-500 ease-in-out">
-                    <div className='col-start-1 col-end-8 row-start-1 row-end-2 fixed'>
+                    <div className='col-start-1 col-end-8 row-start-1 row-end-2'>
                         <Header />
                     </div>
                     <div className='col-start-1 col-end-8 row-start-2 row-end-3'>
@@ -39,7 +39,7 @@ function PageSmall() {
             :
     
                 <div className="grid grid-cols-8 transition -translate-x-1/4  duration-500 ease-in-out">
-                    <div className='col-start-1 col-end-8 row-start-1 row-end-2 fixed'>
+                    <div className='col-start-1 col-end-8 row-start-1 row-end-2'>
                         <Header />
                     </div>
                     <div className='col-start-1 col-end-8 row-start-2 row-end-3'>

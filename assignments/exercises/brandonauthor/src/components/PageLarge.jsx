@@ -24,7 +24,7 @@ function PageLarge() {
             <div className='col-start-1 col-end-7 row-start-5 row-end-6'>
                 <About /> 
             </div>
-            <div className='col-start-7 col-end-9 row-start-1 row-end-6'>
+            <div className='col-start-7 col-end-9 row-start-1 row-end-6 h-full w-full'>
                 <Sidebar />
             </div>
         </div>
