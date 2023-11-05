@@ -9,7 +9,7 @@ function PageLarge() {
 
     return (
         <div className="grid grid-cols-8 transition duration-500 ease-in-out">
-            <div className='col-start-1 col-end-7 row-start-1 row-end-2 fixed'>
+            <div className='col-start-1 col-end-7 row-start-1 row-end-2'>
                 <Header />
             </div>
             <div className='col-start-1 col-end-7 row-start-2 row-end-3'>
