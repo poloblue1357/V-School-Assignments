@@ -2,16 +2,16 @@ import lastDesi from "./lastDesi.png"
 import {useState, useContext} from "react"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import {faBars} from "@fortawesome/free-solid-svg-icons"
-const context = useContext(BrandonAuthorContext)
 import {library} from "@fortawesome/fontawesome-svg-core"
 import { BrandonAuthorContext } from "../ContextProvider"
 
 function Header() {
-
+    
+    const context = useContext(BrandonAuthorContext)
 
     return (
         <nav className="flex font-bold leading-[40px] w-screen bg-[#222] lg:hidden transition">
-            <h1 className="pl-[1em] w-full"> - Author</h1>
+            <h1 className="pl-[1em] w-full">Brandon Patterson - Author</h1>
             <div onClick={context.toggleSidebar} className="h-40 w-[40px] bg-tBeige justify-center items-center flex">
                 <FontAwesomeIcon icon={faBars} className="text-xl"/>
             </div>

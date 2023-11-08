@@ -1,4 +1,4 @@
-import Header from "./Header"
+import Header from "./Header1"
 import About from "./About"
 import Body from "./Body"
 import Design from "./Design"

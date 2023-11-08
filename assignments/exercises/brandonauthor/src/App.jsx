@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react'
-import Header from "./components/Header"
+import Header from "./components/Header1"
 import About from "./components/About"
 import Body from "./components/Body"
 import Design from "./components/Design"
