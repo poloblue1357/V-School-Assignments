@@ -29,6 +29,7 @@ function App() {
       });
     }
   useEffect(() => {
+    console.log(context.isShowing)
     window.addEventListener("resize", handleResize, false);
   }, []);
 

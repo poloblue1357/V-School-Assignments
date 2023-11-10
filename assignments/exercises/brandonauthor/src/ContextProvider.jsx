@@ -4,19 +4,19 @@ const BrandonAuthorContext = React.createContext()
 
 function BrandonAuthorContextProvider(props) {
 
-    const [isOpen, setIsOpen] = useState(true)
+    const [isShowing, setIsShowing] = useState(false)
 
 
     const toggleSidebar = () => {
-        console.log("toggle working!", isOpen)
-        isOpen === true ? setIsOpen(false) : setIsOpen(true)
+        console.log("toggle working!", isShowing)
+        isShowing === true ? setIsShowing(false) : setIsShowing(true)
     }
 
 
 
     return (
         <BrandonAuthorContext.Provider value={{
-            toggleSidebar, isOpen, setIsOpen
+            toggleSidebar, isShowing, setIsShowing
         }}>
             {props.children}
         </BrandonAuthorContext.Provider>

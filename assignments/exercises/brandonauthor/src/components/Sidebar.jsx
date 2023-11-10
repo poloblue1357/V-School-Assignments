@@ -10,7 +10,7 @@ function Sidebar() {
     const context = useContext(BrandonAuthorContext)
 
     return (
-        <div id="test1" className=" bg-tBeige flex flex-col justify-center items-center space-y-6 h-screen sticky top-0 right-0 left-3/4 w-full inset-x-0">
+        <div id="test1" className=" bg-tBeige flex flex-col justify-center items-center space-y-6 h-screen sticky">
             <div className="h-[40px] bg-tBeige"></div>
             <img src={bSmile} className="rounded-full h-[100px] w-[150px] overflow-auto"/>
             <div className="justify-center items-center flex flex-col space-y-2">
