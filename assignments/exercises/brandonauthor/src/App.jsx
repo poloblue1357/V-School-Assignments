@@ -34,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <div className='w-full'>
       {dimensions.width >= breakpoint ?
         <PageLarge />
         :

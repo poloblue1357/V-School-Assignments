@@ -10,6 +10,7 @@ function BrandonAuthorContextProvider(props) {
     const toggleSidebar = () => {
         console.log("toggle working!", isShowing)
         isShowing === true ? setIsShowing(false) : setIsShowing(true)
+        console.log(isShowing)
     }
 
 

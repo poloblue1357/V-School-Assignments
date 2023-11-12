@@ -30,14 +30,14 @@ function PageSmall() {
                     <div className='col-start-1 col-end-8 row-start-5 row-end-6'>
                         <About /> 
                     </div>
-                    <div className='w-[23em] row-start-1 row-end-4'>
+                    <div className='col-start-8 w-[272px] md:w-[368px] row-start-1 row-end-4'>
                         <Sidebar />
                     </div>
                 </div>
         
             :
     
-                <div className="grid grid-cols-7 transition duration-500 ease-in-out">
+                <div className="grid grid-cols-7 transition duration-500 ease-in-out w-full">
                     <div className='col-start-1 col-end-8 row-start-1 row-end-2'>
                         <Header />
                     </div>

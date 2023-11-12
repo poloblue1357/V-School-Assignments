@@ -8,7 +8,7 @@ import Photo from "./Photo"
 function PageLarge() {
 
     return (
-        <div className="grid grid-cols-8 transition duration-500 ease-in-out">
+        <div className="grid grid-cols-6 transition duration-500 ease-in-out">
             <div className='col-start-1 col-end-7 row-start-1 row-end-2'>
                 <Header />
             </div>
@@ -24,7 +24,7 @@ function PageLarge() {
             <div className='col-start-1 col-end-7 row-start-5 row-end-6'>
                 <About /> 
             </div>
-            <div className='col-start-7 col-end-9 row-start-1 row-end-6 h-full w-full'>
+            <div className='row-start-1 row-end-6 h-full w-[293px]'>
                 <Sidebar />
             </div>
         </div>
