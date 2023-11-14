@@ -15,9 +15,10 @@ function PageSmall() {
         <div>
             {context.isShowing ?
                 <div className="grid grid-cols-7 transition duration-500 ease-in-out -translate-x-1/4">
-                    <div className='col-start-1 col-end-8 row-start-1 row-end-2'>
+                    <div className='col-start-1 col-end-8 row-start-1 row-end-2 fixed top-0 w-full'>
                         <Header />
                     </div>
+                    <div style={{height: "40px"}}></div>
                     <div className='col-start-1 col-end-8 row-start-2 row-end-3'>
                         <Photo />
                     </div>
@@ -30,7 +31,7 @@ function PageSmall() {
                     <div className='col-start-1 col-end-8 row-start-5 row-end-6'>
                         <About /> 
                     </div>
-                    <div className='col-start-8 w-[272px] md:w-[368px] row-start-1 row-end-4'>
+                    <div className='col-start-8 w-[272px] md:w-[368px] row-start-1 row-end-4 sticky'>
                         <Sidebar />
                     </div>
                 </div>
@@ -38,9 +39,10 @@ function PageSmall() {
             :
     
                 <div className="grid grid-cols-7 transition duration-500 ease-in-out w-full">
-                    <div className='col-start-1 col-end-8 row-start-1 row-end-2'>
+                    <div className='col-start-1 col-end-8 row-start-1 row-end-2 fixed top-0 w-full'>
                         <Header />
                     </div>
+                    <div style={{height: "40px"}}></div>
                     <div className='col-start-1 col-end-8 row-start-2 row-end-3'>
                         <Photo />
                     </div>
