@@ -14,8 +14,8 @@ function Sidebar() {
             <div className="h-[40px] bg-tBeige"></div>
             <img src={bSmile} className="rounded-full h-[100px] w-[150px] overflow-auto"/>
             <div className="justify-center items-center flex flex-col space-y-2">
-                <h3 className="font-bold">Brandon Patterson</h3>
-                <h4 className="font-bold">Based in Utah, USA</h4>
+                <h3 className="font-bold">BP</h3>
+                <h4 className="font-bold">Based in , USA</h4>
             </div>
             <ul className=" italic space-y-2 w-full space-evenly items-center flex flex-col">
                 <li className=""><a className=" hover:underline decoration-3 hover:text-bold">Home</a></li>

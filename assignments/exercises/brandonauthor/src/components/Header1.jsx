@@ -11,7 +11,7 @@ function Header() {
 
     return (
         <div className="flex font-bold leading-10 w-full bg-[#222] lg:hidden transition">
-            <h1 className="pl-[1em] w-full">Brandon Patterson - Author</h1>
+            <h1 className="pl-[1em] w-full">BP - Author</h1>
             <div onClick={context.toggleSidebar} className="h-40 w-[60px] bg-tBeige justify-center items-center flex right-0">
                 <FontAwesomeIcon icon={faBars} className="text-xl"/>
             </div>
