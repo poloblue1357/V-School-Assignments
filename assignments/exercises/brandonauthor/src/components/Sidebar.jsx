@@ -1,13 +1,13 @@
 import bSmile from "./bSmile.jpeg"
 import {FaLinkedin} from "react-icons/fa"
-import { BrandonAuthorContext } from "../ContextProvider"
+import { BAContext } from "../ContextProvider"
 import {useContext, useState} from "react"
 import "./sidebar.css"
 
 
 function Sidebar() {
 
-    const context = useContext(BrandonAuthorContext)
+    const context = useContext(BAContext)
 
     return (
         <div id="test1" className=" bg-tBeige flex flex-col justify-center items-center space-y-6 w-full h-screen">
@@ -19,12 +19,12 @@ function Sidebar() {
             </div>
             <ul className=" italic space-y-2 w-full space-evenly items-center flex flex-col">
                 <li className=""><a className=" hover:underline decoration-3 hover:text-bold">Home</a></li>
-                <li className=""><a className="" target="_blank" href="https://www.amazon.com/Client-Brett-Simons-Novel-ebook/dp/B0BK63BPXB/ref=sr_1_1?crid=1SUCB8I213A0N&keywords=brandon+patterson+the+client&qid=1699050657&s=books&sprefix=brandon+patterson+the+client%2Cstripbooks%2C97&sr=1-1">Book</a></li>
+                <li className=""><a className="" target="_blank" href="">Book</a></li>
                 <li className=""><a className="">About</a></li>
                 <li className=""><a className="">Contact</a></li>
             </ul>
             <div className="text-2xl w-full bg-tBeige justify-center flex items-center">
-                <a target="_blank" href="https://www.linkedin.com/in/brandon-patterson-author/">
+                <a target="_blank" href="">
                     <FaLinkedin />
                 </a>
             </div>

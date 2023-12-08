@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 
-const BrandonAuthorContext = React.createContext()
+const BAContext = React.createContext()
 
 function BrandonAuthorContextProvider(props) {
 
@@ -16,12 +16,12 @@ function BrandonAuthorContextProvider(props) {
 
 
     return (
-        <BrandonAuthorContext.Provider value={{
+        <BAContext.Provider value={{
             toggleSidebar, isShowing, setIsShowing
         }}>
             {props.children}
-        </BrandonAuthorContext.Provider>
+        </BAContext.Provider>
     )
 }
 
-export {BrandonAuthorContext, BrandonAuthorContextProvider}
+export {BAContext, BrandonAuthorContextProvider}

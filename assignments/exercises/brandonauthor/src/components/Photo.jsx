@@ -1,10 +1,10 @@
 import mountains3 from "./mountains3.jpeg"
 import {useContext} from "react"
-import { BrandonAuthorContext } from "../ContextProvider"
+import { BAContext } from "../ContextProvider"
 
 function Photo() {
 
-    const context = useContext(BrandonAuthorContext)
+    const context = useContext(BAContext)
 
     return (
         <div className="h-[232px] md:h-[320px] lg:h-[293px] xl:h-[347px] transition w-full">

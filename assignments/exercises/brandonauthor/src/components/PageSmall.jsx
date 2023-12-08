@@ -5,16 +5,16 @@ import Body from "./Body"
 import Design from "./Design"
 import Sidebar from "./Sidebar"
 import Photo from "./Photo"
-import { BrandonAuthorContext } from '../ContextProvider'
+import { BAContext } from '../ContextProvider'
 
 function PageSmall() {
 
-    const context = useContext(BrandonAuthorContext)
+    const context = useContext(BAContext)
 
     return (
         <div>
             {context.isShowing ?
-                <div className="grid grid-cols-7 transition duration-500 ease-in-out -translate-x-1/4">
+                <div className="grid grid-cols-7 transition duration-500 ease-in-out -translate-x-1/4 overflow-y-auto overflow-visible">
                     <div className='col-start-1 col-end-8 row-start-1 row-end-2 fixed top-0 w-full'>
                         <Header />
                     </div>
@@ -31,7 +31,7 @@ function PageSmall() {
                     <div className='col-start-1 col-end-8 row-start-5 row-end-6'>
                         <About /> 
                     </div>
-                    <div className='col-start-8 w-[272px] md:w-[368px] row-start-1 row-end-4 sticky'>
+                    <div className='col-start-8 w-[272px] md:w-[368px] row-start-1 row-end-4 fixed top-0'>
                         <Sidebar />
                     </div>
                 </div>

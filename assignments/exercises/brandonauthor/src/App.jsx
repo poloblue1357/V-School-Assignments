@@ -5,7 +5,7 @@ import Body from "./components/Body"
 import Design from "./components/Design"
 import Sidebar from "./components/Sidebar"
 import Photo from "./components/Photo"
-import { BrandonAuthorContext } from './ContextProvider'
+import { BAContext } from './ContextProvider'
 import PageLarge from "./components/PageLarge"
 import PageSmall from "./components/PageSmall"
 import './App.css'
@@ -13,7 +13,7 @@ import './App.css'
 function App() {
   // h-[174px] 
 
-  const context = useContext(BrandonAuthorContext)
+  const context = useContext(BAContext)
   const [width, setWidth] = useState(window.innerWidth)
   const breakpoint = 1024
 
@@ -34,7 +34,7 @@ function App() {
   }, []);
 
   return (
-    <div className='w-full'>
+    <div className='w-fit'>
       {dimensions.width >= breakpoint ?
         <PageLarge />
         :
