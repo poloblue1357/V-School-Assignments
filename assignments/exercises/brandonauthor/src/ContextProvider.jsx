@@ -4,7 +4,10 @@ const BAContext = React.createContext()
 
 function BrandonAuthorContextProvider(props) {
 
+    const nav = document.getElementById("nav")
+
     const [isShowing, setIsShowing] = useState(false)
+    const [isTrue, setIsTrue] = useState(false)
 
 
     const toggleSidebar = () => {
@@ -13,11 +16,22 @@ function BrandonAuthorContextProvider(props) {
         console.log(isShowing)
     }
 
-
+    function onOff() {
+        if(isTrue) {
+            nav.className.replace("translate-x-full", "translate-x-0")
+            setIsTrue(false)
+            console.log("set to false")
+        }
+        else {
+            nav.className.replace("translate-x-0", "translate-x-full")
+            setIsTrue(true)
+            console.log("set to true")
+        }
+    }
 
     return (
         <BAContext.Provider value={{
-            toggleSidebar, isShowing, setIsShowing
+            toggleSidebar, isShowing, setIsShowing, onOff, isTrue, setIsTrue
         }}>
             {props.children}
         </BAContext.Provider>
