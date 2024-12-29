@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import Header from "./Header1"
 import About from "./About"
 import Body from "./Body"
-import Design from "./Design"
+import Design from "./testDesign"
 import Sidebar from "./Sidebar"
 import Photo from "./Photo"
 import { BAContext } from '../ContextProvider'

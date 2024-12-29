@@ -4,11 +4,14 @@
 
 @layer base {
   html {
-    @apply bg-tDark text-tYellow font-serif grid-rows-5
+    @apply bg-white text-tDark font-serif grid-rows-5
   }
 
   ul li  {
-    @apply underline underline-offset-4 text-lg transition hover:scale-150 
+    /* @apply underline-offset-4 text-lg transition hover:scale-110 hover:text-white hover:border-solid hover:border-white pl-1 border-l-2 border-tBeige */
+  }
+  ul a {
+    @apply underline-offset-4 text-lg transition hover:scale-110 hover:text-white hover:border-solid hover:border-white pl-[6px] border-l-2 border-tBeige
   }
 
   /* input,

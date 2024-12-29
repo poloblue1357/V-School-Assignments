@@ -12,6 +12,5 @@ function Photo() {
         </div>
     )
 }
-// h-[192px] w-full
 
 export default Photo

@@ -2,7 +2,8 @@ import { useState, useEffect } from "react"
 import { createUserWithEmailAndPassword,
         signInWithEmailAndPassword,
         onAuthStateChanged,
-        signOut
+        signOut,
+        
         } from "firebase/auth"
 import { auth } from "./firebase-config"
 
@@ -53,7 +54,7 @@ function App() {
         await signOut(auth)
         updateUser()
     }
-    
+
     return (
         <div>
             <div>
