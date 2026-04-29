@@ -1791,6 +1791,12 @@ input, select, textarea {
 		color: #4acaa8;
 		font-size: 3.5em;
 	}
+	/* header.major .tagline {
+		font-size: 1.5em;
+		font-weight: 600;
+		color: #777;
+		margin-top: -0.5em;
+	} */
 
 		header.major h2 + p {
 			color: #777;
@@ -1798,6 +1804,7 @@ input, select, textarea {
 			font-weight: 700;
 			margin-top: -0.75em;
 		}
+		
 
 /* Form */
 
