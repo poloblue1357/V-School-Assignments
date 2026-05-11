@@ -1,9 +1,23 @@
-const x = ["Hello!", "is", "this", "working?"]
+// const set = new Set()
 
-function includes(word) {
-    if(word === "!") {
-        return word
+// containsDuplicate.map(num => {
+//     if(set.has(num)) {
+//         return true
+//     } else {
+//         continue
+//     }
+//     set.add(num)
+// })
+
+
+const set = new Set()
+
+function isAnagram(s, t) {
+
+    set.add(s)
+    if(set.has(t)) {
+        return true
+    } else {
+        return false
     }
 }
-
-console.log(includes(x))
