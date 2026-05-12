@@ -112,30 +112,43 @@
 
 
 
-function sequence(nums) {
-    const set = new Set()
-    let count = 0
-    let total = 0
-    let x = nums.sort(function(a, b){return a-b})
+// function sequence(nums) {
+//     const set = new Set()
+//     let count = 0
+//     let total = 0
+//     let x = nums.sort(function(a, b){return a-b})
 
-    for(const num of x) {
-        set.add(num)
+//     for(const num of x) {
+//         set.add(num)
+//     }
+    
+//     for(const num of set) {
+//         if(set.has(num + 1)) {
+//             count++
+//             continue
+//         } else if(!set.has(num + 1)) {
+//             if(total > count) {
+//                 continue
+//             } else {
+//                 total = count
+//             }
+//             count = 0
+//             continue
+//         }
+//     }
+//     return total + 1
+// }
+// console.log(sequence([1,2,3,10,11,12,13]))
+
+function nearby(nums, k) {
+    const set = new Set()
+    for(const num of nums) {
+        set.has(num)
+    }
+
+    for(let i = 0; i < nums.length; i++) {
+        if(set.has(num[i]))
     }
     
-    for(const num of set) {
-        if(set.has(num + 1)) {
-            count++
-            continue
-        } else if(!set.has(num + 1)) {
-            if(total > count) {
-                continue
-            } else {
-                total = count
-            }
-            count = 0
-            continue
-        }
-    }
-    return total + 1
 }
-console.log(sequence([1,2,3,10,11,12,13]))
+console.log(nearby([1, 2, 3, 1], 3))
