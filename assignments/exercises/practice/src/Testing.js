@@ -316,11 +316,198 @@
 
 
 
-function r(s, t) {
+// function r(s, t) {
 
-    const map = new Map()
+//     const map = new Map()
 
+
+
+// }
+// console.log(r('note', 'magazine'))
+
+
+// 1. Find Number!
+// 'use strict';
+
+// const fs = require('fs');
+
+// process.stdin.resume();
+// process.stdin.setEncoding('utf-8');
+
+// let inputString = '';
+// let currentLine = 0;
+
+// process.stdin.on('data', function(inputStdin) {
+//     inputString += inputStdin;
+// });
+
+// process.stdin.on('end', function() {
+//     inputString = inputString.split('\n');
+
+//     main();
+// });
+
+// function readLine() {
+//     return inputString[currentLine++];
+// }
+
+
+
+// /*
+//  * Complete the 'findNumber' function below.
+//  *
+//  * The function is expected to return a STRING.
+//  * The function accepts following parameters:
+//  *  1. INTEGER_ARRAY arr
+//  *  2. INTEGER k
+//  */
+
+// function findNumber(arr, k) {
     
+//     const set = new Set()
 
+//     for(const num of arr) {
+//         set.add(num)
+//     }
+//     if(set.has(k)) {
+//         return 'YES'
+//     } else {
+//         return 'NO'
+//     }
+// }
+
+// function main() {
+//     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+//     const arrCount = parseInt(readLine().trim(), 10);
+
+//     let arr = [];
+
+//     for (let i = 0; i < arrCount; i++) {
+//         const arrItem = parseInt(readLine().trim(), 10);
+//         arr.push(arrItem);
+//     }
+
+//     const k = parseInt(readLine().trim(), 10);
+
+//     const result = findNumber(arr, k);
+
+//     ws.write(result + '\n');
+
+//     ws.end();
+// }
+
+
+
+
+
+// // 2. Odd Numbers!
+
+// 'use strict';
+
+// const fs = require('fs');
+
+// process.stdin.resume();
+// process.stdin.setEncoding('utf-8');
+
+// let inputString = '';
+// let currentLine = 0;
+
+// process.stdin.on('data', function(inputStdin) {
+//     inputString += inputStdin;
+// });
+
+// process.stdin.on('end', function() {
+//     inputString = inputString.split('\n');
+
+//     main();
+// });
+
+// function readLine() {
+//     return inputString[currentLine++];
+// }
+
+
+
+// /*
+//  * Complete the 'oddNumbers' function below.
+//  *
+//  * The function is expected to return an INTEGER_ARRAY.
+//  * The function accepts following parameters:
+//  *  1. INTEGER l
+//  *  2. INTEGER r
+//  */
+
+// function oddNumbers(l, r) {
+    
+//     let array = []
+    
+//     for(let i = l; i <= r; i++) {
+//         if(i % 2 === 1) {
+//             array.push(i)
+//         }
+//     }
+//     return array
+// }
+
+// function main() {
+//     const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+//     const l = parseInt(readLine().trim(), 10);
+
+//     const r = parseInt(readLine().trim(), 10);
+
+//     const result = oddNumbers(l, r);
+
+//     ws.write(result.join('\n') + '\n');
+
+//     ws.end();
+// }
+
+
+
+
+// function betterCompression(s) {
+
+//     let currentLetter
+//     let currentNumber = 0
+//     let array = []
+
+//     for(let i = 0; i < s.length; i++) {
+
+//         if(isNaN(s[i])) {
+//             currentLetter = s[i]
+//         } else {
+//             currentNumber = s[i]
+//         }
+//     }
+//     console.log(array)
+// }
+// console.log(betterCompression("a3c9b2c1"))
+
+function betterCompression(s) {
+    let map = {};
+    let i = 0;
+
+    while (i < s.length) {
+        let letter = s[i];
+        i++;
+
+        let numStr = '';
+
+        while (i < s.length && !isNaN(s[i])) {
+            numStr += s[i];
+            i++;
+        }
+
+        map[letter] = (map[letter] || 0) + Number(numStr);
+    }
+
+    return Object.keys(map)
+        .sort()
+        .map(k => k + map[k])
+        .join('');
 }
-console.log(r('note', 'magazine'))
+
+console.log(betterCompression("a3c9b2c1")); // a3b2c10
+
