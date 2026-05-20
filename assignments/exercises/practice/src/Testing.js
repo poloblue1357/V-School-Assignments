@@ -485,29 +485,43 @@
 // }
 // console.log(betterCompression("a3c9b2c1"))
 
-function betterCompression(s) {
-    let map = {};
-    let i = 0;
+// function betterCompression(s) {
+//     let map = {};
+//     let i = 0;
 
-    while (i < s.length) {
-        let letter = s[i];
-        i++;
+//     while (i < s.length) {
+//         let letter = s[i];
+//         i++;
 
-        let numStr = '';
+//         let numStr = '';
 
-        while (i < s.length && !isNaN(s[i])) {
-            numStr += s[i];
-            i++;
+//         while (i < s.length && !isNaN(s[i])) {
+//             numStr += s[i];
+//             i++;
+//         }
+
+//         map[letter] = (map[letter] || 0) + Number(numStr);
+//     }
+
+//     return Object.keys(map)
+//         .sort()
+//         .map(k => k + map[k])
+//         .join('');
+// }
+
+// console.log(betterCompression("a3c9b2c1")); // a3b2c10
+
+
+function compose(functions) {
+
+    
+    return function(x) {
+        
+        let result = x
+        for(let i = 0; i < functions.length; i++) { 
+            result = functions[i](result)
         }
-
-        map[letter] = (map[letter] || 0) + Number(numStr);
+        
     }
-
-    return Object.keys(map)
-        .sort()
-        .map(k => k + map[k])
-        .join('');
 }
-
-console.log(betterCompression("a3c9b2c1")); // a3b2c10
-
+compose(x)
