@@ -512,16 +512,29 @@
 // console.log(betterCompression("a3c9b2c1")); // a3b2c10
 
 
-function compose(functions) {
+// function compose(functions) {
 
-    
-    return function(x) {
+//     return function(x) {
         
-        let result = x
-        for(let i = 0; i < functions.length; i++) { 
-            result = functions[i](result)
+//         let result = x
+//         for(let i = functions.length - 1; i >= 0; i--) { 
+//             result = functions[i](result)
+//         }
+        
+//     }
+// }
+// compose(x)
+
+function twoSum(nums, target) {
+
+    for(let i = 0; i < nums.length; i++) {
+        let y = []
+        for(let j = i + 1; j < nums.length; j++) {
+            if(nums[i] + nums[j] === target) {
+                y.push(i, j)
+                return y
+            }
         }
-        
     }
-}
-compose(x)
+};
+console.log(twoSum([3,2,4], 9))
