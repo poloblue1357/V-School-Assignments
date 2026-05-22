@@ -525,16 +525,27 @@
 // }
 // compose(x)
 
-function twoSum(nums, target) {
+// function twoSum(nums, target) {
 
-    for(let i = 0; i < nums.length; i++) {
-        let y = []
-        for(let j = i + 1; j < nums.length; j++) {
-            if(nums[i] + nums[j] === target) {
-                y.push(i, j)
-                return y
-            }
-        }
+//     for(let i = 0; i < nums.length; i++) {
+//         let y = []
+//         for(let j = i + 1; j < nums.length; j++) {
+//             if(nums[i] + nums[j] === target) {
+//                 y.push(i, j)
+//                 return y
+//             }
+//         }
+//     }
+// };
+// console.log(twoSum([3,2,4], 9))
+
+function isPalindrome(x) {
+    let y = x.toString()
+    let z = y.split('').reverse().join('')
+    if(x === Number(z)) {
+        return true
+    } else {
+        return false
     }
-};
-console.log(twoSum([3,2,4], 9))
+}
+console.log(isPalindrome(121))
