@@ -539,13 +539,18 @@
 // };
 // console.log(twoSum([3,2,4], 9))
 
-function isPalindrome(x) {
-    let y = x.toString()
-    let z = y.split('').reverse().join('')
-    if(x === Number(z)) {
-        return true
-    } else {
-        return false
-    }
+// function isPalindrome(x) {
+//     let y = x.toString()
+//     let z = y.split('').reverse().join('')
+//     if(x === Number(z)) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// console.log(isPalindrome(121))
+
+function romanToInt(s) {
+    
 }
-console.log(isPalindrome(121))
+console.log(romanToInt(III))
