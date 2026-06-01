@@ -550,7 +550,49 @@
 // }
 // console.log(isPalindrome(121))
 
-function romanToInt(s) {
-    
+// function romanToInt(s) {
+//     let values = {
+//         'I': 1,
+//         'V': 5,
+//         'X': 10,
+//         'L': 50,
+//         'C': 100,
+//         'D': 500,
+//         'M': 1000
+//     }
+
+//     let total = 0
+
+//     for(let i = 0; i < s.length; i++) {
+//         let current = values[s[i]]
+//         let next = values[s[i + 1]]
+
+//         if(current < next) {
+//             total -= current
+//         } else {
+//             total += current
+//         }
+//     }
+//     return total
+// }
+// console.log(romanToInt("MCMXCIV"))
+
+
+function longestCommonPrefix(strs) {
+    let currentString = strs[0];
+
+    for (let i = 0; i < currentString.length; i++) {
+        let prefix = currentString.slice(0, i + 1);
+
+        for (let j = 1; j < strs.length; j++) {
+            let nextString = strs[j];
+
+            if (!nextString.startsWith(prefix)) {
+                return currentString.slice(0, i);
+            }
+        }
+    }
+
+    return currentString;
 }
-console.log(romanToInt(III))
+console.log(longestCommonPrefix(["flower","flow","flight"]))
