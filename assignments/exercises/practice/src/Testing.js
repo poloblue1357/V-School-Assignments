@@ -578,21 +578,102 @@
 // console.log(romanToInt("MCMXCIV"))
 
 
-function longestCommonPrefix(strs) {
-    let currentString = strs[0];
+// function longestCommonPrefix(strs) {
+//     let currentString = strs[0];
 
-    for (let i = 0; i < currentString.length; i++) {
-        let prefix = currentString.slice(0, i + 1);
+//     for (let i = 0; i < currentString.length; i++) {
+//         let prefix = currentString.slice(0, i + 1);
 
-        for (let j = 1; j < strs.length; j++) {
-            let nextString = strs[j];
+//         for (let j = 1; j < strs.length; j++) {
+//             let nextString = strs[j];
 
-            if (!nextString.startsWith(prefix)) {
-                return currentString.slice(0, i);
-            }
-        }
-    }
+//             if (!nextString.startsWith(prefix)) {
+//                 return currentString.slice(0, i);
+//             }
+//         }
+//     }
 
-    return currentString;
-}
-console.log(longestCommonPrefix(["flower","flow","flight"]))
+//     return currentString;
+// }
+// console.log(longestCommonPrefix(["flower","flow","flight"]))
+
+
+// function isValid(s) {
+        
+//     let arr = s.split('')
+//     let x = true
+
+//     while(x) {
+//         for(let i = 0; i < arr.length; i++) {
+    
+//             if(arr[i] === '(' && arr[i + 1] === ')') {
+//                 arr.splice(i, 1)
+//                 arr.splice(i, 1)
+//                 break
+//             } else if(arr[i] === '{' && arr[i + 1] === '}') {
+//                 arr.splice(i, 1)
+//                 arr.splice(i, 1)
+//                 break
+//             } else if(arr[i] === '[' && arr[i + 1] === ']') {
+//                 arr.splice(i, 1)
+//                 arr.splice(i, 1)
+//                 break
+//             } else {
+//                 x = false
+//             }
+//         }
+//     }
+//     if(arr.length === 0) {
+//         return true
+//     } else {
+//         return false
+//     }
+// }
+// console.log(isValid("()[]{}"))
+
+
+// function isValid(s) {
+//     const stack = [];
+
+//     const map = {
+//         ')': '(',
+//         '}': '{',
+//         ']': '['
+//     };
+
+//     for (let char of s) {
+//         if (char === '(' || char === '{' || char === '[') {
+//             stack.push(char);
+//         } else {
+//             if (stack.pop() !== map[char]) {
+//                 return false;
+//             }
+//         }
+//     }
+
+//     return stack.length === 0;
+// }
+
+// console.log(isValid("([)]")); 
+
+// function isValid(s) {
+//     const stack = [];
+//     const map = {
+//         '(': ')',
+//         '{': '}',
+//         '[': ']'
+//     };
+
+//     for (let char of s) {
+//         // If it's an opening bracket, push its matching closer to the stack
+//         if (map[char]) {
+//             stack.push(map[char]);
+//         } 
+//         // If it's a closing bracket, it MUST match the one popped from the stack
+//         else if (stack.pop() !== char) {
+//             return false;
+//         }
+//     }
+
+//     return stack.length === 0;
+// }
