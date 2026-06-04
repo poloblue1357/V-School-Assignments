@@ -657,23 +657,31 @@
 // console.log(isValid("([)]")); 
 
 // function isValid(s) {
-//     const stack = [];
-//     const map = {
-//         '(': ')',
-//         '{': '}',
-//         '[': ']'
-//     };
+    // const stack = [];
+    // const map = {
+    //     '(': ')',
+    //     '{': '}',
+    //     '[': ']'
+    // };
 
-//     for (let char of s) {
-//         // If it's an opening bracket, push its matching closer to the stack
-//         if (map[char]) {
-//             stack.push(map[char]);
-//         } 
-//         // If it's a closing bracket, it MUST match the one popped from the stack
-//         else if (stack.pop() !== char) {
-//             return false;
-//         }
-//     }
+    // for (let char of s) {
+    //     // If it's an opening bracket, push its matching closer to the stack
+    //     if (map[char]) {
+    //         stack.push(map[char]);
+    //     } 
+    //     // If it's a closing bracket, it MUST match the one popped from the stack
+    //     else if (stack.pop() !== char) {
+    //         return false;
+    //     }
+    // }
 
-//     return stack.length === 0;
+    // return stack.length === 0;
 // }
+
+
+
+
+function mergeTwoLists(list1, list2) {
+    return list1.concat(list2).sort()
+}
+console.log(mergeTwoLists([1,2,4], [1,3,4]))
