@@ -678,10 +678,44 @@
     // return stack.length === 0;
 // }
 
+// function mergeTwoLists(list1, list2) {
+//     // 1. Create a dummy node to hold the start of our new list
+//     let dummy = new ListNode(-1);
+//     // 2. 'tail' will track the end of our growing merged list
+//     let tail = dummy;
+    
+//     // 3. Loop while BOTH lists still have nodes to compare
+//     while (list1 !== null && list2 !== null) {
+//         if (list1.val <= list2.val) {
+//             tail.next = list1;  // Connect tail to list1's current node
+//             list1 = list1.next; // Move list1's head forward
+//         } else {
+//             tail.next = list2;  // Connect tail to list2's current node
+//             list2 = list2.next; // Move list2's head forward
+//         }
+//         tail = tail.next;       // Move our tail forward
+//     }
+    
+//     // 4. If one list runs out of nodes, hook up the remainder of the other list
+//     if (list1 !== null) {
+//         tail.next = list1;
+//     } else {
+//         tail.next = list2;
+//     }
+    
+//     // 5. The actual merged list starts *after* the dummy node
+//     return dummy.next;
+// }
+// console.log(mergeTwoLists([1,2,4], [1,3,4]))
 
 
+// function removeDuplicates(nums) {
 
-function mergeTwoLists(list1, list2) {
-    return list1.concat(list2).sort()
-}
-console.log(mergeTwoLists([1,2,4], [1,3,4]))
+//     for(let i = nums.length - 1; i > 0; i--) {
+//         if(nums[i] === nums[i - 1]) {
+//             nums.splice(i, 1)
+//         }
+//     }
+// }
+// console.log(removeDuplicates([1,1,2]))
+
