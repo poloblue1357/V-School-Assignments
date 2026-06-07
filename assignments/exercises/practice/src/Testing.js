@@ -719,3 +719,67 @@
 // }
 // console.log(removeDuplicates([1,1,2]))
 
+// function removeElement(nums, val) {
+
+//     for(let i = nums.length - 1; i >= 0; i--) {
+//         if(nums[i] === val) {
+//             nums.splice(i, 1)
+//         }
+//     }
+// }
+// console.log(removeElement([3,2,2,3]))
+
+
+// function strStr(haystack, needle) {
+//     if(haystack.includes(needle)) {
+//         return haystack.indexOf(needle)
+//     } else {
+//         return -1
+//     }
+// }
+// console.log(strStr('leetcode', 'leeto'))
+
+
+// function searchInsert(nums, target) {
+//     if(!nums.indexOf(target)) {
+//         for(let i = nums.length - 1; i > 0; i--) {
+//             if(nums[i] < target) {
+//                 return i + 1
+//             }
+//         }
+//     }
+//     return nums.indexOf(target)
+// }
+
+// function searchInsert(nums, target) {
+//     let left = 0;
+//     let right = nums.length - 1;
+
+//     while (left <= right) {
+//         // Find the middle index
+//         let mid = Math.floor((left + right) / 2);
+
+//         if (nums[mid] === target) {
+//             return mid; // Target found!
+//         } else if (nums[mid] < target) {
+//             left = mid + 1; // Target is in the right half
+//         } else {
+//             right = mid - 1; // Target is in the left half
+//         }
+//     }
+
+//     // If we exit the loop, 'left' is exactly where the target should be inserted
+//     return left;
+// }
+// console.log(searchInsert([1,3,5,6], 5))
+// console.log(searchInsert([1, 3, 5, 6], 2))
+
+
+function lengthOfLastWord(s) {
+    let a = s.trim()
+    let x = a.split(" ")
+    let y = x.length
+    let z = x[y - 1]
+    return z.length
+}
+console.log(lengthOfLastWord("   fly me   to   the moon  "))
