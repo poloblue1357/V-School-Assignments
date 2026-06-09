@@ -775,11 +775,23 @@
 // console.log(searchInsert([1, 3, 5, 6], 2))
 
 
-function lengthOfLastWord(s) {
-    let a = s.trim()
-    let x = a.split(" ")
-    let y = x.length
-    let z = x[y - 1]
-    return z.length
+// function lengthOfLastWord(s) {
+//     let a = s.trim()
+//     let x = a.split(" ")
+//     let y = x.length
+//     let z = x[y - 1]
+//     return z.length
+// }
+// console.log(lengthOfLastWord("   fly me   to   the moon  "))
+
+
+function plusOne(digits) {
+
+    let x = digits.join("")
+    let y = BigInt(x) + 1n
+    let z = y.toString()
+    let a = z.split("")
+    let b = a.map(num => Number(num))
+    return b
 }
-console.log(lengthOfLastWord("   fly me   to   the moon  "))
+console.log(plusOne([1,2,3]))
