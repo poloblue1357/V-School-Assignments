@@ -785,13 +785,37 @@
 // console.log(lengthOfLastWord("   fly me   to   the moon  "))
 
 
-function plusOne(digits) {
+// function plusOne(digits) {
 
-    let x = digits.join("")
-    let y = BigInt(x) + 1n
-    let z = y.toString()
-    let a = z.split("")
-    let b = a.map(num => Number(num))
-    return b
+//     let x = digits.join("")
+//     let y = BigInt(x) + 1n
+//     let z = y.toString()
+//     let a = z.split("")
+//     let b = a.map(num => Number(num))
+//     return b
+
+//     // use the reverse for loop next time for this - more efficient
+// }
+// console.log(plusOne([1,2,3]))
+
+// function addBinary(a, b) {
+//     let num = BigInt("0b" + a) + BigInt("0b" + b)
+//     let binaryString = num.toString(2); 
+
+//     return binaryString
+// }
+// console.log(addBinary(11, 1))
+
+
+// function mySqrt(x) {
+//     return Math.floor(Math.sqrt(x))
+// }
+// console.log(mySqrt(4))
+
+function mySqrt(x) {
+
+    
+
+
 }
-console.log(plusOne([1,2,3]))
+console.log(mySqrt(4))
